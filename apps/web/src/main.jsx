@@ -84,6 +84,7 @@ function Header({ language, setLanguage }) {
   const [menuOpen, setMenuOpen] = useState(false)
   const [searchOpen, setSearchOpen] = useState(false)
   const [languageOpen, setLanguageOpen] = useState(false)
+  const [blogMenuDismissed, setBlogMenuDismissed] = useState(false)
   const languagePickerRef = useRef(null)
   const t = copy[language]
   const links = [['/', t.home], ['/sobre-nos', t.about], ['/miguel-bregieira', t.miguel], ['/industrias', t.industries], ['/blog', t.blog], ['/contactos', t.contact], ['/area-reservada', t.reserved]]
@@ -96,7 +97,7 @@ function Header({ language, setLanguage }) {
   }, [])
   return <header className="site-header">
     <Link className="brand" to="/" aria-label="Relato - Página inicial"><img src="/brand/relato-logo-white.png" alt="Relato" /></Link>
-    <nav className={menuOpen ? 'main-nav is-open' : 'main-nav'} aria-label="Navegação principal">{links.map(([to, label]) => to === '/blog' ? <div className="nav-dropdown" key={to}><NavLink to={to} onClick={() => setMenuOpen(false)}>{label}</NavLink><div className="nav-dropdown-menu">{blogCategories.map((category) => <Link key={category.id} to={category.id === 'all' ? '/blog' : `/blog?categoria=${category.id}`} onClick={() => setMenuOpen(false)}>{getCategoryLabel(category, language)}</Link>)}</div></div> : <NavLink key={to} to={to} onClick={() => setMenuOpen(false)} className={to === '/area-reservada' ? 'reserved-link' : ''}>{label}{to === '/area-reservada' && <small>{t.comingSoon}</small>}</NavLink>)}</nav>
+    <nav className={menuOpen ? 'main-nav is-open' : 'main-nav'} aria-label="Navegação principal">{links.map(([to, label]) => to === '/blog' ? <div className={blogMenuDismissed ? 'nav-dropdown is-dismissed' : 'nav-dropdown'} key={to} onMouseEnter={() => setBlogMenuDismissed(false)} onMouseLeave={() => setBlogMenuDismissed(true)}><NavLink to={to} onClick={() => { setMenuOpen(false); setBlogMenuDismissed(true) }}>{label}</NavLink><div className="nav-dropdown-menu">{blogCategories.map((category) => <Link key={category.id} to={category.id === 'all' ? '/blog' : `/blog?categoria=${category.id}`} onClick={() => { setMenuOpen(false); setBlogMenuDismissed(true) }}>{getCategoryLabel(category, language)}</Link>)}</div></div> : <NavLink key={to} to={to} onClick={() => setMenuOpen(false)} className={to === '/area-reservada' ? 'reserved-link' : ''}>{label}{to === '/area-reservada' && <small>{t.comingSoon}</small>}</NavLink>)}</nav>
     <div className="header-actions">
       <button className="icon-button" type="button" onClick={() => setSearchOpen(true)} aria-label={t.search}><Icon name="search" /></button>
       <div className="language-picker" ref={languagePickerRef}><button type="button" onClick={() => setLanguageOpen(!languageOpen)} aria-expanded={languageOpen}><span className="flag" aria-hidden="true">{languages.find((item) => item.code === language).flag}</span>{languages.find((item) => item.code === language).label}<span>⌄</span></button>{languageOpen && <div className="language-menu">{languages.map((item) => <button key={item.code} className={item.code === language ? 'selected' : ''} type="button" onClick={() => { setLanguage(item.code); setLanguageOpen(false) }}><span className="flag" aria-hidden="true">{item.flag}</span>{item.label}<small>{item.name}</small></button>)}</div>}</div>

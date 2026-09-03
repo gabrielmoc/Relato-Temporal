@@ -80,6 +80,15 @@ function Icon({ name }) {
   return <svg aria-hidden="true" viewBox="0 0 24 24">{paths[name]}</svg>
 }
 
+function ContactIcon({ type }) {
+  const paths = {
+    phone: <><path d="M6.5 3.5 9 7.7 7.4 9.5a14.4 14.4 0 0 0 7.1 7.1l1.8-1.6 4.2 2.5-1 3.4c-.2.7-.9 1.2-1.7 1.1C9.5 21.2 2.8 14.5 2 6.2c-.1-.8.4-1.5 1.1-1.7l3.4-1Z" /></>,
+    email: <><rect x="3" y="5" width="18" height="14" rx="1.5" /><path d="m4 7 8 6 8-6" /></>,
+    pin: <><path d="M12 21s6-5.4 6-11a6 6 0 1 0-12 0c0 5.6 6 11 6 11Z" /><circle cx="12" cy="10" r="2" /></>
+  }
+  return <svg aria-hidden="true" viewBox="0 0 24 24">{paths[type]}</svg>
+}
+
 function Header({ language, setLanguage }) {
   const [menuOpen, setMenuOpen] = useState(false)
   const [searchOpen, setSearchOpen] = useState(false)
@@ -203,7 +212,11 @@ function BlogPostPage({ language }) {
   const primaryCategory = blogCategories.find((category) => category.id === postCategories[post.slug][0])
   return <article className="blog-post-page"><header className="blog-post-hero"><Link className="back-link" to="/blog">{c.blog.back}</Link><div className="blog-post-hero-grid"><div><p className="section-label">{getCategoryLabel(primaryCategory, language)}</p><h1>{post.title}</h1><p className="blog-post-subtitle">{post.subtitle}</p><div className="blog-post-meta"><span>{post.author}</span><span>{post.date}</span></div></div><figure><img src={post.cover} alt="" /></figure></div></header><div className="blog-post-content"><p className="blog-post-intro">{post.intro}</p>{post.quote && <blockquote>“{post.quote}”<cite>{language === 'en' ? 'Miguel Bregieira, quoted in the article' : language === 'es' ? 'Miguel Bregieira, citado en el artículo' : 'Miguel Bregieira, citado no artigo'}</cite></blockquote>}{post.sections.map((section) => <section key={section.heading}><h2>{section.heading}</h2>{section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</section>)}<FullArticleText text={post.fullText} language={language} /></div></article>
 }
-function ContactPage({ t, language }) { const c = pageContent[language]; return <StandardPage eyebrow={c.contact.eyebrow} title={t.contact} text={c.contact.text}><div className="contact-cards"><a href="tel:+351937040541"><small>{c.contact.phone}</small>+351 937 040 541</a><a href="mailto:miguel.bregieira@gmail.com"><small>{c.contact.email}</small>miguel.bregieira@gmail.com</a></div><section className="locations" aria-label="Relato Temporal addresses"><div className="location-card"><div><p className="section-label">{c.contact.faro}</p><h2>Avenida 5 de Outubro 82A</h2><p>Faro · Portugal</p></div><iframe title="Relato Temporal map in Faro" src="https://www.google.com/maps?q=Avenida+5+de+Outubro+82A,+Faro,+Portugal&output=embed" loading="lazy" /></div><div className="location-card"><div><p className="section-label">{c.contact.aveiro}</p><h2>Travessa Mestre Mónica 12</h2><p>Gafanha da Nazaré · Portugal</p></div><iframe title="Relato Temporal map in Gafanha da Nazaré" src="https://www.google.com/maps?q=Travessa+Mestre+Monica+12,+Gafanha+da+Nazare,+Portugal&output=embed" loading="lazy" /></div></section></StandardPage> }
+function ContactPage({ t, language }) {
+  const c = pageContent[language]
+  const ui = language === 'en' ? { direct: 'Direct line', write: 'Business enquiries', locations: 'Locations', locationTitle: 'Two points of contact in Portugal.' } : language === 'es' ? { direct: 'Línea directa', write: 'Consultas comerciales', locations: 'Ubicaciones', locationTitle: 'Dos puntos de contacto en Portugal.' } : { direct: 'Linha direta', write: 'Pedidos comerciais', locations: 'Moradas', locationTitle: 'Dois pontos de contacto em Portugal.' }
+  return <section className="contact-page"><header className="contact-hero"><p className="section-label">{c.contact.eyebrow}</p><h1>{t.contact}</h1><p>{c.contact.text}</p></header><div className="contact-actions"><a className="contact-action" href="tel:+351937040541"><span className="contact-action-icon"><ContactIcon type="phone" /></span><span className="contact-action-copy"><small>{c.contact.phone}</small><strong>+351 937 040 541</strong><em>{ui.direct}</em></span><b>↗</b></a><a className="contact-action" href="mailto:miguel.bregieira@gmail.com"><span className="contact-action-icon"><ContactIcon type="email" /></span><span className="contact-action-copy"><small>{c.contact.email}</small><strong>miguel.bregieira@gmail.com</strong><em>{ui.write}</em></span><b>↗</b></a></div><section className="contact-locations" aria-label="Relato Temporal addresses"><header><div><p className="section-label">{ui.locations}</p><h2>{ui.locationTitle}</h2></div><span><ContactIcon type="pin" /></span></header><div className="locations"><div className="location-card"><div><p className="section-label">{c.contact.faro}</p><h2>Avenida 5 de Outubro 82A</h2><p>Faro · Portugal</p></div><iframe title="Relato Temporal map in Faro" src="https://www.google.com/maps?q=Avenida+5+de+Outubro+82A,+Faro,+Portugal&output=embed" loading="lazy" /></div><div className="location-card"><div><p className="section-label">{c.contact.aveiro}</p><h2>Travessa Mestre Mónica 12</h2><p>Gafanha da Nazaré · Portugal</p></div><iframe title="Relato Temporal map in Gafanha da Nazaré" src="https://www.google.com/maps?q=Travessa+Mestre+Monica+12,+Gafanha+da+Nazare,+Portugal&output=embed" loading="lazy" /></div></div></section></section>
+}
 function ReservedPage({ t, language }) { const c = pageContent[language]; return <StandardPage eyebrow={c.reserved.eyebrow} title={t.reserved} text={t.comingSoon}><div className="empty-state"><span>{t.comingSoon}</span><p>{c.reserved.text}</p></div></StandardPage> }
 
 function App() {

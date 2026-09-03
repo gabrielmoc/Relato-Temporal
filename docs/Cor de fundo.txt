@@ -1,0 +1,3 @@
+Cor de fundo: #ffffff
+
+Os arquivos vetoriais vêm sempre com um fundo transparente. Essa é a melhor prática para qualquer cenário de impressão. A cor de fundo normalmente é adicionada no processo de impressão. A razão principal disso é devido ao fato de que ela depende muito da forma da superfície a ser impressa. Imagine uma placa arredondada na qual você deseja imprimir. Ali, a forma retangular do fundo do seu logotipo seria um problema.

@@ -1,0 +1,12 @@
+{
+  "name": "relato-temporal",
+  "private": true,
+  "workspaces": ["apps/*"],
+  "scripts": {
+    "dev": "npm run dev --workspace=@relato/web",
+    "dev:web": "npm run dev --workspace=@relato/web",
+    "dev:api": "npm run dev --workspace=@relato/api",
+    "build": "npm run build --workspace=@relato/web",
+    "start:api": "npm run start --workspace=@relato/api"
+  }
+}

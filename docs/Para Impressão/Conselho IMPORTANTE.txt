@@ -1,0 +1,3 @@
+Os arquivos vetoriais vêm sempre com um fundo transparente. Essa é a melhor prática para qualquer cenário de impressão. A cor de fundo normalmente é adicionada no processo de impressão. A razão principal disso é devido ao fato de que ela depende muito da forma da superfície a ser impressa. Imagine uma placa arredondada na qual você deseja imprimir. Ali, a forma retangular do fundo do seu logotipo seria um problema.
+
+Não é incomum que o formato vetor EPS não possa ser aberto/visualizado no seu computador ou smartphone, pois pode não haver um programa para abri-lo. No entanto, a gráfica certamente saberá lidar com esse arquivo. O mesmo é verdade para os arquivos em PDF.

@@ -265,3 +265,13 @@
 .superfish-catalogue > div { max-width: 720px; }.superfish-catalogue h2 { max-width: 530px; }.superfish-catalogue p:last-child { max-width: 580px; margin: 24px 0 0; color: #aac1c4; font-size: 16px; line-height: 1.7; }
 .superfish-catalogue > a { display: inline-flex; gap: 13px; align-items: center; padding: 15px 0; border-bottom: 1px solid var(--aqua); color: var(--cloud); font-size: 10px; font-weight: 700; letter-spacing: .13em; text-decoration: none; text-transform: uppercase; white-space: nowrap; }.superfish-catalogue > a span { color: var(--aqua); font-size: 18px; }
 @media (max-width: 780px) { .superfish-products-hero { min-height: auto; padding: 145px 24px 75px; }.superfish-products-hero .back-link { margin-bottom: 35px; }.superfish-products-hero .section-label { margin-top: 42px; }.superfish-products-list { padding: 75px 24px; }.superfish-products-list > header, .superfish-product-details, .superfish-catalogue { grid-template-columns: 1fr; }.superfish-products-list > header { gap: 0; }.superfish-product-stack { margin-top: 45px; gap: 16px; }.superfish-product { padding: 29px 24px; }.superfish-product > header { gap: 13px; padding-bottom: 24px; }.superfish-product-details { gap: 20px; padding-top: 30px; }.superfish-table-wrap { margin: 8px -24px 0; padding: 0 24px; }.superfish-table-wrap th, .superfish-table-wrap td { font-size: 12px; }.superfish-carousel { min-height: 230px; }.superfish-carousel img { width: 76%; height: 230px; }.superfish-carousel-control.previous { left: 12px; }.superfish-carousel-control.next { right: 12px; }.superfish-catalogue { gap: 35px; padding: 65px 24px; }.superfish-catalogue > a { width: fit-content; } }
+
+/* Publication and access refinements. */
+.industry-actions .disabled-action { padding: 10px 5px; border: 1px solid rgba(232, 242, 243, .18); color: #d4e0e2; cursor: not-allowed; font-size: 9px; font-weight: 700; letter-spacing: .08em; opacity: .48; text-align: center; text-transform: uppercase; }
+.site-header { isolation: isolate; }
+.nav-dropdown { z-index: 1; }
+.nav-dropdown:hover { z-index: 20; }
+.nav-dropdown-menu { z-index: 100; overflow: hidden; background-color: #0b171c; }
+.blog-card-publication { margin: -5px 0 20px; color: var(--aqua); font-size: 10px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; }
+.ssrn-publication-link { display: inline-flex; gap: 12px; align-items: center; margin-top: 34px; padding: 14px 18px; border: 1px solid var(--aqua); color: var(--aqua); font-size: 10px; font-weight: 700; letter-spacing: .1em; text-decoration: none; text-transform: uppercase; transition: background .25s ease, color .25s ease; }
+.ssrn-publication-link:hover { background: var(--aqua); color: var(--ink); }

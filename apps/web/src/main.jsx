@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { createRoot } from 'react-dom/client'
-import { BrowserRouter, Link, NavLink, Route, Routes, useParams, useSearchParams } from 'react-router-dom'
+import { BrowserRouter, Link, NavLink, Route, Routes, useLocation, useParams, useSearchParams } from 'react-router-dom'
 import './styles.css'
 
 const financiamentoPmeText = '/brand/necessidade-financiamento-pme-portuguesa.pdf'
@@ -49,6 +49,60 @@ const pageContent = {
   pt: { home: { introTitle: 'A ponte certa para novos mercados.', introText: 'Representamos indústrias alimentares que procuram entrar, crescer e construir relações sólidas no Brasil.', bannerTitle: 'Origem, qualidade\ne oportunidade.', bannerLink: 'Ver indústrias' }, about: { eyebrow: '01 / Relato', text: 'A Relato atua na aproximação entre produtores de excelência e oportunidades concretas no mercado brasileiro.', features: ['Uma presença comercial próxima, informada e comprometida com cada parceria.', 'Da estratégia de entrada à continuidade no mercado, acompanhamos cada relação com clareza.'] }, miguel: { eyebrow: '02 / Perfil', tagline: 'Conhecimento especializado para relações comerciais que atravessam fronteiras.', pull: 'Uma trajetória construída entre a indústria alimentar portuguesa e o mercado brasileiro.', paragraphs: ['Miguel Bregieira iniciou o seu percurso profissional em Aveiro, uma das regiões mais tradicionais na produção de bacalhau em Portugal. Entrou cedo no setor dos pescados, adquirindo experiência em todas as etapas: aquisição de produtos da pesca, industrialização, desenvolvimento de produtos e estratégias comerciais.', 'Com formação superior em Gestão de Empresas e Auditoria Financeira, pós-graduação em Direito Aduaneiro, MBA em Fiscalidade e mestrado em Negócios Internacionais, Miguel reúne uma combinação rara de conhecimento científico e experiência prática no setor em que atua.', 'Esta especialização permite aos clientes da Relato contar com apoio na elaboração de processos de DIPOA para a libertação de produtos no Brasil, no desenvolvimento de marcas próprias para o mercado brasileiro e num conjunto alargado de serviços de apoio à exportação.'] }, industries: { eyebrow: '03 / Parceiros', title: 'Nossas indústrias\nagenciadas.', text: 'Representamos marcas que levam a qualidade da indústria alimentar portuguesa ao mercado brasileiro.', back: '← Voltar às indústrias', comingSoon: 'Em breve', detailText: 'Esta área está preparada para receber os conteúdos oficiais da marca.', actions: { produtos: 'Produtos', receitas: 'Receitas', catalogo: 'Catálogo' } }, blog: { eyebrow: '04 / Conteúdos', title: 'Ideias que\nmovem mercados.', text: 'Perspetivas sobre gestão, indústria alimentar e as pontes comerciais entre Portugal e Brasil.', empty: 'Ainda não existem publicações nesta categoria.', read: 'Ler artigo', back: '← Voltar ao blog', publication: 'Publicação completa', pdfTitle: 'Leia o documento original', pdfText: 'Utilize os controlos do leitor para navegar entre páginas, pesquisar e ampliar o conteúdo.', download: 'Descarregar PDF', fallback: 'Se o leitor não carregar no seu navegador,', fallbackLink: 'abra o PDF numa nova janela' }, contact: { eyebrow: '05 / Relato', text: 'Entre em contacto para conversar sobre representação e oportunidades de mercado.', phone: 'Telefone', email: 'Email', faro: 'Sede / Faro', aveiro: 'Norte / Aveiro' }, reserved: { eyebrow: '06 / Futuro', text: 'Esta área será preparada numa próxima fase do projeto.' }, footer: 'Agenciamento de indústrias alimentares com serviços de apoio à exportação para o Brasil.' },
   en: { home: { introTitle: 'The right bridge to new markets.', introText: 'We represent food industries looking to enter, grow and build solid relationships in Brazil.', bannerTitle: 'Origin, quality\nand opportunity.', bannerLink: 'View industries' }, about: { eyebrow: '01 / Relato', text: 'Relato brings together outstanding producers and concrete opportunities in the Brazilian market.', features: ['A close, informed and committed commercial presence for every partnership.', 'From market-entry strategy to long-term continuity, we manage each relationship with clarity.'] }, miguel: { eyebrow: '02 / Profile', tagline: 'Specialist knowledge for commercial relationships that cross borders.', pull: 'A career built between Portugal’s food industry and the Brazilian market.', paragraphs: ['Miguel Bregieira began his professional journey in Aveiro, one of Portugal’s most traditional regions for cod production. He entered the seafood sector early, gaining experience across every stage: sourcing fishery products, industrialisation, product development and commercial strategy.', 'With degrees in Business Management and Financial Auditing, a postgraduate qualification in Customs Law, an MBA in Taxation and a master’s degree in International Business, Miguel combines academic knowledge with practical experience in his sector.', 'This expertise gives Relato clients support with DIPOA processes for releasing products in Brazil, developing own-label brands for the Brazilian market and a broad range of export-support services.'] }, industries: { eyebrow: '03 / Partners', title: 'Our represented\nindustries.', text: 'We represent brands that bring the quality of Portugal’s food industry to the Brazilian market.', back: '← Back to industries', comingSoon: 'Coming soon', detailText: 'This area is ready to receive the brand’s official content.', actions: { produtos: 'Products', receitas: 'Recipes', catalogo: 'Catalogue' } }, blog: { eyebrow: '04 / Insights', title: 'Ideas that\nmove markets.', text: 'Perspectives on management, the food industry and commercial bridges between Portugal and Brazil.', empty: 'There are no publications in this category yet.', read: 'Read article', back: '← Back to blog', publication: 'Full publication', pdfTitle: 'Read the original document', pdfText: 'Use the viewer controls to navigate pages, search and zoom in.', download: 'Download PDF', fallback: 'If the viewer does not load in your browser,', fallbackLink: 'open the PDF in a new window' }, contact: { eyebrow: '05 / Relato', text: 'Get in touch to discuss representation and market opportunities.', phone: 'Telephone', email: 'Email', faro: 'Head office / Faro', aveiro: 'North / Aveiro' }, reserved: { eyebrow: '06 / Future', text: 'This area will be developed in a future phase of the project.' }, footer: 'Food industry representation with export support services for Brazil.' },
   es: { home: { introTitle: 'El puente adecuado hacia nuevos mercados.', introText: 'Representamos industrias alimentarias que buscan entrar, crecer y construir relaciones sólidas en Brasil.', bannerTitle: 'Origen, calidad\ny oportunidad.', bannerLink: 'Ver industrias' }, about: { eyebrow: '01 / Relato', text: 'Relato acerca productores de excelencia y oportunidades concretas en el mercado brasileño.', features: ['Una presencia comercial cercana, informada y comprometida con cada alianza.', 'Desde la estrategia de entrada hasta la continuidad en el mercado, acompañamos cada relación con claridad.'] }, miguel: { eyebrow: '02 / Perfil', tagline: 'Conocimiento especializado para relaciones comerciales que cruzan fronteras.', pull: 'Una trayectoria construida entre la industria alimentaria portuguesa y el mercado brasileño.', paragraphs: ['Miguel Bregieira inició su trayectoria profesional en Aveiro, una de las regiones más tradicionales en la producción de bacalao de Portugal. Entró pronto en el sector pesquero, adquiriendo experiencia en todas las etapas: compra de productos de pesca, industrialización, desarrollo de productos y estrategias comerciales.', 'Con formación superior en Gestión de Empresas y Auditoría Financiera, posgrado en Derecho Aduanero, MBA en Fiscalidad y máster en Negocios Internacionales, Miguel reúne conocimientos académicos y experiencia práctica en su sector.', 'Esta especialización permite a los clientes de Relato contar con apoyo en procesos DIPOA para la liberación de productos en Brasil, el desarrollo de marcas propias para el mercado brasileño y una amplia gama de servicios de apoyo a la exportación.'] }, industries: { eyebrow: '03 / Socios', title: 'Nuestras industrias\nrepresentadas.', text: 'Representamos marcas que llevan la calidad de la industria alimentaria portuguesa al mercado brasileño.', back: '← Volver a las industrias', comingSoon: 'Próximamente', detailText: 'Esta área está preparada para recibir los contenidos oficiales de la marca.', actions: { produtos: 'Productos', receitas: 'Recetas', catalogo: 'Catálogo' } }, blog: { eyebrow: '04 / Contenidos', title: 'Ideas que\nmueven mercados.', text: 'Perspectivas sobre gestión, industria alimentaria y los puentes comerciales entre Portugal y Brasil.', empty: 'Todavía no hay publicaciones en esta categoría.', read: 'Leer artículo', back: '← Volver al blog', publication: 'Publicación completa', pdfTitle: 'Lea el documento original', pdfText: 'Utilice los controles del visor para navegar por las páginas, buscar y ampliar el contenido.', download: 'Descargar PDF', fallback: 'Si el visor no carga en su navegador,', fallbackLink: 'abra el PDF en una nueva ventana' }, contact: { eyebrow: '05 / Relato', text: 'Póngase en contacto para hablar de representación y oportunidades de mercado.', phone: 'Teléfono', email: 'Correo electrónico', faro: 'Sede / Faro', aveiro: 'Norte / Aveiro' }, reserved: { eyebrow: '06 / Futuro', text: 'Esta área se preparará en una próxima fase del proyecto.' }, footer: 'Representación de industrias alimentarias con servicios de apoyo a la exportación para Brasil.' }
+}
+
+const aboutContent = {
+  pt: {
+    eyebrow: '01 / Relato',
+    lead: 'Agenciamento de indústrias alimentares para empresas que pretendem internacionalizar-se através da exportação para o Brasil.',
+    facts: ['Em atividade desde 2013', 'Faro · Aveiro · Portugal'],
+    storyLabel: 'A nossa forma de trabalhar',
+    storyTitle: 'Conhecimento que abre mercados.',
+    paragraphs: [
+      'A Relato Temporal é uma empresa de agenciamento de indústrias alimentares que pretendem internacionalizar-se através da exportação para o Brasil, liderada pelo agente Miguel Bregieira. Iniciou a sua atividade em 2013 e tem atualmente escritórios em Faro e Aveiro, Portugal.',
+      'A particularidade, a dimensão e a cultura do mercado brasileiro constituem uma grande barreira de entrada para empresas que têm como objetivo esse mercado. O conhecimento empírico, o savoir-faire, do nosso fundador Miguel Bregieira, com experiência no mercado brasileiro desde 2007, é uma chave de sucesso neste percurso.',
+      'A descoberta e promoção de produtos formatados aos fatores críticos de sucesso dos consumidores brasileiros é também uma das principais preocupações desta empresa de representação, que proporciona um agenciamento de grande proximidade, praticamente familiar.',
+      'Esta preocupação é facilitada pelo facto de os processos internos da própria equipa da Relato seguirem exatamente esses moldes. A equipa é formada por quase uma dezena de profissionais competentes e dedicados.',
+      'Esta é, de resto, uma das razões do sucesso da Relato, que tem patrocinado a internacionalização de empresas com ganhos de forte implementação no mercado brasileiro.'
+    ],
+    servicesLabel: 'Além do agenciamento',
+    servicesTitle: 'Apoio à exportação, de ponta a ponta.',
+    services: ['Homologação da indústria no Brasil', 'Homologação de produtos', 'Estudos prévios de mercado', 'Consultadoria em marketing internacional']
+  },
+  en: {
+    eyebrow: '01 / Relato',
+    lead: 'Food-industry representation for businesses looking to internationalise through exports to Brazil.',
+    facts: ['Active since 2013', 'Faro · Aveiro · Portugal'],
+    storyLabel: 'How we work',
+    storyTitle: 'Knowledge that opens markets.',
+    paragraphs: [
+      'Relato Temporal is a food-industry representation company for businesses looking to internationalise by exporting to Brazil. Led by agent Miguel Bregieira, it began operations in 2013 and now has offices in Faro and Aveiro, Portugal.',
+      'The scale, distinctive character and culture of the Brazilian market create a significant barrier to entry. The empirical expertise, or savoir-faire, of founder Miguel Bregieira, who has worked in the Brazilian market since 2007, is key to navigating it successfully.',
+      'Identifying and promoting products shaped around the Brazilian consumer’s critical success factors is a core concern of our representation work, allowing close, almost family-like support.',
+      'This approach is reinforced by Relato’s own internal processes and a team of nearly ten skilled, committed professionals.',
+      'It is one of the reasons for Relato’s success in supporting companies’ internationalisation and helping them establish a strong presence in Brazil.'
+    ],
+    servicesLabel: 'Beyond representation',
+    servicesTitle: 'End-to-end export support.',
+    services: ['Industrial approval in Brazil', 'Product approval', 'Preliminary market studies', 'International marketing consultancy']
+  },
+  es: {
+    eyebrow: '01 / Relato',
+    lead: 'Representación de industrias alimentarias para empresas que desean internacionalizarse mediante la exportación a Brasil.',
+    facts: ['Desde 2013', 'Faro · Aveiro · Portugal'],
+    storyLabel: 'Nuestra forma de trabajar',
+    storyTitle: 'Conocimiento que abre mercados.',
+    paragraphs: [
+      'Relato Temporal es una empresa de representación de industrias alimentarias que desean internacionalizarse mediante la exportación a Brasil. Liderada por el agente Miguel Bregieira, inició su actividad en 2013 y actualmente cuenta con oficinas en Faro y Aveiro, Portugal.',
+      'La particularidad, dimensión y cultura del mercado brasileño constituyen una importante barrera de entrada. El conocimiento empírico, o savoir-faire, de nuestro fundador Miguel Bregieira, con experiencia en Brasil desde 2007, es clave para alcanzar el éxito en ese mercado.',
+      'La identificación y promoción de productos adaptados a los factores críticos de éxito para el consumidor brasileño es otra preocupación central de nuestra representación, que proporciona un acompañamiento cercano, casi familiar.',
+      'Este enfoque se ve reforzado por los procesos internos de Relato y por un equipo de casi diez profesionales competentes y dedicados.',
+      'Es una de las razones del éxito de Relato al apoyar la internacionalización de empresas y su sólida implantación en el mercado brasileño.'
+    ],
+    servicesLabel: 'Además de la representación',
+    servicesTitle: 'Apoyo a la exportación de principio a fin.',
+    services: ['Homologación industrial en Brasil', 'Homologación de productos', 'Estudios previos de mercado', 'Consultoría en marketing internacional']
+  }
 }
 
 const industryTranslations = {
@@ -119,6 +173,7 @@ function Header({ language, setLanguage }) {
 function SearchPanel({ onClose, t, language }) {
   const [value, setValue] = useState('')
   const c = pageContent[language]
+  const about = aboutContent[language]
   useEffect(() => {
     const previousOverflow = document.body.style.overflow
     document.body.style.overflow = 'hidden'
@@ -127,7 +182,7 @@ function SearchPanel({ onClose, t, language }) {
   const resultTypes = language === 'en' ? { page: 'Page', profile: 'Profile', industry: 'Industry', publication: 'Publication', category: 'Category' } : language === 'es' ? { page: 'Página', profile: 'Perfil', industry: 'Industria', publication: 'Publicación', category: 'Categoría' } : { page: 'Página', profile: 'Perfil', industry: 'Indústria', publication: 'Publicação', category: 'Categoria' }
   const entries = [
     { to: '/', title: t.home, type: resultTypes.page, content: `${c.home.introTitle} ${c.home.introText} ${c.home.bannerTitle}` },
-    { to: '/sobre-nos', title: t.about, type: resultTypes.page, content: `${c.about.text} ${c.about.features.join(' ')}` },
+    { to: '/sobre-nos', title: t.about, type: resultTypes.page, content: `${about.lead} ${about.paragraphs.join(' ')} ${about.services.join(' ')}` },
     { to: '/miguel-bregieira', title: 'Miguel Bregieira', type: resultTypes.profile, content: `${c.miguel.tagline} ${c.miguel.pull} ${c.miguel.paragraphs.join(' ')}` },
     { to: '/industrias', title: t.industries, type: resultTypes.page, content: `${c.industries.title} ${c.industries.text}` },
     { to: '/contactos', title: t.contact, type: resultTypes.page, content: `${c.contact.text} Faro Aveiro Gafanha Nazaré Avenida 5 de Outubro Travessa Mestre Mónica` },
@@ -155,13 +210,28 @@ function Footer({ t, language }) {
 
 function Home({ t, language }) {
   const c = pageContent[language]
-  return <><section className="hero"><div className="hero-orbit orbit-one" /><div className="hero-orbit orbit-two" /><div className="hero-content"><p>{t.heroEyebrow}</p><h1>{t.heroTitle}<strong>{t.heroAccent}</strong></h1><span>{t.heroText}</span><Link to="/sobre-nos" className="text-cta">{t.explore}<b>↓</b></Link></div></section>
+  const [showIntro, setShowIntro] = useState(true)
+  const [introLeaving, setIntroLeaving] = useState(false)
+  const finishIntro = () => setIntroLeaving(true)
+  return <><section className="home-hero-slot">{showIntro && <section className={introLeaving ? 'home-video-intro is-leaving' : 'home-video-intro'} aria-label="Relato Temporal" onTransitionEnd={(event) => { if (event.propertyName === 'opacity') setShowIntro(false) }}><video autoPlay muted playsInline preload="auto" onEnded={finishIntro} onError={() => setShowIntro(false)}><source src="/brand/home.mp4" type="video/mp4" /></video></section>}<section className="hero"><div className="hero-orbit orbit-one" /><div className="hero-orbit orbit-two" /><div className="hero-content"><p>{t.heroEyebrow}</p><h1>{t.heroTitle}<strong>{t.heroAccent}</strong></h1><span>{t.heroText}</span><Link to="/sobre-nos" className="text-cta">{t.explore}<b>↓</b></Link></div></section></section>
     <section className="home-intro"><p className="section-label">01 / Relato</p><h2>{c.home.introTitle}</h2><div><p>{c.home.introText}</p><Link className="text-cta dark" to="/sobre-nos">{t.explore}<b>→</b></Link></div></section>
     <section className="industries-banner"><p className="section-label">02 / {t.industries}</p><h2>{c.home.bannerTitle.split('\n').map((line, index) => <span key={line}>{line}{index === 0 && <br />}</span>)}</h2><Link to="/industrias">{c.home.bannerLink} <b>→</b></Link></section></>
 }
 
-function StandardPage({ eyebrow, title, text, children }) { return <section className="standard-page"><p className="section-label">{eyebrow}</p><h1>{title}</h1><p className="page-lead">{text}</p>{children}</section> }
-function AboutPage({ t, language }) { const c = pageContent[language]; return <StandardPage eyebrow={c.about.eyebrow} title={t.about} text={c.about.text}><div className="feature-grid"><p>{c.about.features[0]}</p><p>{c.about.features[1]}</p></div></StandardPage> }
+function StandardPage({ eyebrow, title, text, leadAside, children }) { return <section className="standard-page"><p className="section-label">{eyebrow}</p><h1>{title}</h1>{leadAside ? <div className="page-lead-row"><p className="page-lead">{text}</p>{leadAside}</div> : <p className="page-lead">{text}</p>}{children}</section> }
+function AboutPage({ t, language }) {
+  const about = aboutContent[language]
+  return <StandardPage eyebrow={about.eyebrow} title={t.about} text={about.lead} leadAside={<div className="about-facts">{about.facts.map((fact) => <span key={fact}>{fact}</span>)}</div>}>
+    <section className="about-story">
+      <div className="about-story-heading"><p className="section-label">{about.storyLabel}</p><h2>{about.storyTitle}</h2></div>
+      <div className="about-copy">{about.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
+    </section>
+    <section className="about-services">
+      <div><p className="section-label">{about.servicesLabel}</p><h2>{about.servicesTitle}</h2></div>
+      <ul>{about.services.map((service) => <li key={service}>{service}</li>)}</ul>
+    </section>
+  </StandardPage>
+}
 function MiguelPage({ language }) {
   const c = pageContent[language]
   return <article className="profile-page">
@@ -219,10 +289,16 @@ function ContactPage({ t, language }) {
 }
 function ReservedPage({ t, language }) { const c = pageContent[language]; return <StandardPage eyebrow={c.reserved.eyebrow} title={t.reserved} text={t.comingSoon}><div className="empty-state"><span>{t.comingSoon}</span><p>{c.reserved.text}</p></div></StandardPage> }
 
+function ScrollToTop() {
+  const { pathname, search } = useLocation()
+  useEffect(() => { window.scrollTo(0, 0) }, [pathname, search])
+  return null
+}
+
 function App() {
   const [language, setLanguage] = useState('pt')
   const t = copy[language]
-  return <div className="app"><Header language={language} setLanguage={setLanguage} /><main><Routes><Route path="/" element={<Home t={t} language={language} />} /><Route path="/sobre-nos" element={<AboutPage t={t} language={language} />} /><Route path="/miguel-bregieira" element={<MiguelPage language={language} />} /><Route path="/industrias" element={<IndustriesPage language={language} />} /><Route path="/industrias/:industry/:section" element={<IndustryContentPage language={language} />} /><Route path="/blog" element={<BlogPage language={language} />} /><Route path="/blog/:slug" element={<BlogPostPage language={language} />} /><Route path="/contactos" element={<ContactPage t={t} language={language} />} /><Route path="/area-reservada" element={<ReservedPage t={t} language={language} />} /></Routes></main><Footer t={t} language={language} /></div>
+  return <div className="app"><ScrollToTop /><Header language={language} setLanguage={setLanguage} /><main><Routes><Route path="/" element={<Home t={t} language={language} />} /><Route path="/sobre-nos" element={<AboutPage t={t} language={language} />} /><Route path="/miguel-bregieira" element={<MiguelPage language={language} />} /><Route path="/industrias" element={<IndustriesPage language={language} />} /><Route path="/industrias/:industry/:section" element={<IndustryContentPage language={language} />} /><Route path="/blog" element={<BlogPage language={language} />} /><Route path="/blog/:slug" element={<BlogPostPage language={language} />} /><Route path="/contactos" element={<ContactPage t={t} language={language} />} /><Route path="/area-reservada" element={<ReservedPage t={t} language={language} />} /></Routes></main><Footer t={t} language={language} /></div>
 }
 
 createRoot(document.getElementById('root')).render(<BrowserRouter><App /></BrowserRouter>)

@@ -227,3 +227,41 @@
 .recipe-method li::before { position: absolute; top: 25px; left: 0; color: var(--aqua); content: '0' counter(recipe-step); font-size: 11px; font-weight: 700; letter-spacing: .1em; }
 .recipe-method li:last-child { border-bottom: 1px solid #cadad7; }
 @media (max-width: 780px) { .recipe-detail-hero { padding: 144px 24px 0; }.recipe-detail-hero > .back-link { margin-bottom: 34px; }.recipe-detail-grid, .recipe-detail-body { grid-template-columns: 1fr; }.recipe-detail-grid figure, .recipe-detail-grid figure img { min-height: 290px; }.recipe-detail-summary { min-height: 0; padding: 55px 24px 48px; }.recipe-detail-summary h1 { margin: 46px 0 36px; font-size: clamp(48px, 13vw, 66px); }.ingredient-panel, .recipe-method { padding: 60px 24px; }.ingredient-panel h2, .recipe-method h2 { margin-bottom: 30px; }.recipe-method li { min-height: 0; padding: 23px 0 23px 50px; font-size: 17px; } }
+
+/* Superfish product catalogue */
+.superfish-products { background: #eef3f1; color: var(--ink); }
+.superfish-products-hero { min-height: 70vh; padding: 185px clamp(24px, 14vw, 240px) 105px; background: radial-gradient(ellipse at 80% 0%, #16424c 0%, #0a1a20 42%, var(--night) 84%); color: var(--cloud); }
+.superfish-products-hero .back-link { margin-bottom: 48px; }
+.superfish-products-hero .section-label { margin-top: 58px; }
+.superfish-products-hero h1 { margin: 18px 0 0; font-family: 'Playfair Display', Georgia, serif; font-size: clamp(58px, 8vw, 112px); font-weight: 400; letter-spacing: -.065em; line-height: .88; }
+.superfish-products-hero > p:last-child { max-width: 720px; margin: 30px 0 0; color: #b5cbce; font-size: 17px; line-height: 1.75; }
+.superfish-products-list { padding: 118px clamp(24px, 10vw, 176px) 125px; }
+.superfish-products-list > header { display: grid; grid-template-columns: minmax(230px, .8fr) 1.2fr; gap: 54px; align-items: end; max-width: 1360px; margin: 0 auto; }
+.superfish-products-list > header h2, .superfish-catalogue h2 { max-width: 620px; margin: 17px 0 0; font-family: 'Playfair Display', Georgia, serif; font-size: clamp(42px, 5vw, 68px); font-weight: 400; letter-spacing: -.055em; line-height: .94; }
+.superfish-product-stack { display: grid; gap: 24px; max-width: 1360px; margin: 67px auto 0; }
+.superfish-product { overflow: hidden; padding: clamp(30px, 4.5vw, 64px); border: 1px solid #c7d6d3; background: #f8faf8; }
+.superfish-product > header { display: flex; align-items: baseline; gap: 22px; padding-bottom: 30px; border-bottom: 1px solid #c5d5d1; }
+.superfish-product > header span { color: var(--aqua); font-size: 11px; font-weight: 700; letter-spacing: .14em; }
+.superfish-product h3 { margin: 0; font-family: 'Playfair Display', Georgia, serif; font-size: clamp(39px, 4.4vw, 65px); font-weight: 400; letter-spacing: -.055em; line-height: .92; }
+.superfish-product-details { display: grid; grid-template-columns: minmax(250px, .62fr) minmax(0, 1.38fr); gap: clamp(35px, 6vw, 100px); padding: 42px 0 30px; }
+.superfish-description .section-label { margin: 0 0 21px; }
+.superfish-description > p:not(.section-label) { margin: 0 0 16px; color: #37595d; font-size: 16px; line-height: 1.55; }
+.superfish-description b { color: var(--ink); font-weight: 600; }
+.superfish-table-wrap { overflow-x: auto; }
+.superfish-table-wrap table { width: 100%; min-width: 575px; border-collapse: collapse; color: #436266; }
+.superfish-table-wrap th { padding: 0 9px 12px; color: var(--aqua); font-size: 9px; font-weight: 700; letter-spacing: .12em; text-align: left; text-transform: uppercase; }
+.superfish-table-wrap td { padding: 12px 9px; border-top: 1px solid #c8d8d5; font-size: 15px; line-height: 1.25; }
+.superfish-table-wrap th:first-child, .superfish-table-wrap td:first-child { padding-left: 0; color: #213d41; }
+.superfish-table-wrap th:last-child, .superfish-table-wrap td:last-child { padding-right: 0; }
+.superfish-carousel { position: relative; display: grid; min-height: 300px; margin-top: 6px; place-items: center; background: linear-gradient(135deg, #eaf1ee, #f9fbf9); }
+.superfish-carousel img { display: block; width: min(570px, 78%); height: 300px; object-fit: contain; mix-blend-mode: multiply; }
+.superfish-carousel-control { position: absolute; z-index: 1; top: calc(50% - 20px); display: grid; width: 40px; height: 40px; padding: 0; place-items: center; border: 1px solid #a9c6c4; border-radius: 50%; background: rgba(248, 250, 248, .86); color: #2a5559; font-size: 20px; transition: border-color .2s ease, background .2s ease; }
+.superfish-carousel-control:hover { border-color: var(--aqua); background: #fff; }
+.superfish-carousel-control.previous { left: 22px; }.superfish-carousel-control.next { right: 22px; }
+.superfish-carousel-dots { position: absolute; bottom: 19px; display: flex; gap: 8px; }
+.superfish-carousel-dots button { width: 7px; height: 7px; padding: 0; border: 0; border-radius: 50%; background: #b8c9c7; }
+.superfish-carousel-dots button.active { background: var(--ink); }
+.superfish-catalogue { display: grid; grid-template-columns: 1fr auto; gap: 55px; align-items: end; padding: 85px clamp(24px, 14vw, 240px); background: #0a1a20; color: var(--cloud); }
+.superfish-catalogue > div { max-width: 720px; }.superfish-catalogue h2 { max-width: 530px; }.superfish-catalogue p:last-child { max-width: 580px; margin: 24px 0 0; color: #aac1c4; font-size: 16px; line-height: 1.7; }
+.superfish-catalogue > a { display: inline-flex; gap: 13px; align-items: center; padding: 15px 0; border-bottom: 1px solid var(--aqua); color: var(--cloud); font-size: 10px; font-weight: 700; letter-spacing: .13em; text-decoration: none; text-transform: uppercase; white-space: nowrap; }.superfish-catalogue > a span { color: var(--aqua); font-size: 18px; }
+@media (max-width: 780px) { .superfish-products-hero { min-height: auto; padding: 145px 24px 75px; }.superfish-products-hero .back-link { margin-bottom: 35px; }.superfish-products-hero .section-label { margin-top: 42px; }.superfish-products-list { padding: 75px 24px; }.superfish-products-list > header, .superfish-product-details, .superfish-catalogue { grid-template-columns: 1fr; }.superfish-products-list > header { gap: 0; }.superfish-product-stack { margin-top: 45px; gap: 16px; }.superfish-product { padding: 29px 24px; }.superfish-product > header { gap: 13px; padding-bottom: 24px; }.superfish-product-details { gap: 20px; padding-top: 30px; }.superfish-table-wrap { margin: 8px -24px 0; padding: 0 24px; }.superfish-table-wrap th, .superfish-table-wrap td { font-size: 12px; }.superfish-carousel { min-height: 230px; }.superfish-carousel img { width: 76%; height: 230px; }.superfish-carousel-control.previous { left: 12px; }.superfish-carousel-control.next { right: 12px; }.superfish-catalogue { gap: 35px; padding: 65px 24px; }.superfish-catalogue > a { width: fit-content; } }

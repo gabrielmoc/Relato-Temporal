@@ -114,6 +114,127 @@ const industryTranslations = {
   'costa-atlantico': { en: 'Specialist in hake and European hake. Brand currently being formalised.', es: 'Especialista en merluza. Marca en proceso de formalización.' }
 }
 
+const guimarpeixeProducts = {
+  pt: {
+    eyebrow: 'Guimarpeixe / Produtos',
+    title: 'Guimarpeixe.',
+    intro: 'Com rigorosos padrões de qualidade e um processo que valoriza a sustentabilidade, os nossos produtos são cuidadosamente selecionados para garantir a melhor experiência para o consumidor. Explore a linha completa e conheça cada produto em detalhe.',
+    listLabel: 'A nossa seleção',
+    catalogueLabel: 'Catálogo virtual',
+    catalogueTitle: 'Conheça a linha completa.',
+    catalogueText: 'Consulte o catálogo Guimarpeixe para ver formatos, referências e especificações dos produtos.',
+    download: 'Abrir catálogo PDF',
+    products: [
+      { name: 'Posta de Cação', text: 'Cação é um peixe versátil e apreciado, disponível em diversos cortes, ideal para receitas que exigem sabor e textura delicada.' },
+      { name: 'Lombo de Cação', text: 'Um corte selecionado de cação, preparado para valorizar receitas de sabor suave e textura delicada.' },
+      { name: 'Cubo de Cação', text: 'Uma opção prática de cação, pensada para preparações versáteis e diferentes momentos de consumo.' },
+      { name: 'Medalhão de Cação', text: 'Cortes de cação de apresentação cuidada, ideais para pratos que pedem consistência e qualidade.' },
+      { name: 'Sardinha Portuguesa', text: 'Um clássico dos mares, conhecido pelo sabor marcante e versatilidade. Perfeita para grelhados, assados ou conservas, é uma excelente escolha para pratos tradicionais e contemporâneos.' }
+    ]
+  },
+  en: {
+    eyebrow: 'Guimarpeixe / Products',
+    title: 'Guimarpeixe.',
+    intro: 'With rigorous quality standards and a process that values sustainability, our products are carefully selected to ensure the best consumer experience. Explore the complete range and discover each product in detail.',
+    listLabel: 'Our selection',
+    catalogueLabel: 'Digital catalogue',
+    catalogueTitle: 'Discover the complete range.',
+    catalogueText: 'View the Guimarpeixe catalogue for formats, references and product specifications.',
+    download: 'Open PDF catalogue',
+    products: [
+      { name: 'Dogfish steak', text: 'A versatile and appreciated fish, available in several cuts and ideal for recipes that call for delicate flavour and texture.' },
+      { name: 'Dogfish loin', text: 'A selected dogfish cut, prepared to enhance recipes with a mild flavour and delicate texture.' },
+      { name: 'Dogfish cubes', text: 'A practical dogfish option, designed for versatile preparations and different occasions.' },
+      { name: 'Dogfish medallion', text: 'Carefully presented dogfish cuts, ideal for dishes that require consistency and quality.' },
+      { name: 'Portuguese sardine', text: 'A classic from the sea, known for its distinctive flavour and versatility. Perfect grilled, roasted or preserved, it is an excellent choice for traditional and contemporary dishes.' }
+    ]
+  },
+  es: {
+    eyebrow: 'Guimarpeixe / Productos',
+    title: 'Guimarpeixe.',
+    intro: 'Con rigurosos estándares de calidad y un proceso que valora la sostenibilidad, nuestros productos se seleccionan cuidadosamente para garantizar la mejor experiencia al consumidor. Explore la gama completa y conozca cada producto en detalle.',
+    listLabel: 'Nuestra selección',
+    catalogueLabel: 'Catálogo virtual',
+    catalogueTitle: 'Conozca la gama completa.',
+    catalogueText: 'Consulte el catálogo Guimarpeixe para ver formatos, referencias y especificaciones de los productos.',
+    download: 'Abrir catálogo PDF',
+    products: [
+      { name: 'Rodaja de cazón', text: 'Un pescado versátil y apreciado, disponible en varios cortes e ideal para recetas que exigen sabor y textura delicada.' },
+      { name: 'Lomo de cazón', text: 'Un corte seleccionado de cazón, preparado para realzar recetas de sabor suave y textura delicada.' },
+      { name: 'Cubos de cazón', text: 'Una opción práctica de cazón, pensada para preparaciones versátiles y diferentes ocasiones de consumo.' },
+      { name: 'Medallón de cazón', text: 'Cortes de cazón de presentación cuidada, ideales para platos que requieren consistencia y calidad.' },
+      { name: 'Sardina portuguesa', text: 'Un clásico del mar, conocido por su sabor intenso y versatilidad. Perfecta para la parrilla, al horno o en conserva, es una excelente elección para platos tradicionales y contemporáneos.' }
+    ]
+  }
+}
+
+const guimarpeixeProductImages = {
+  0: '/brand/g1.webp',
+  2: '/brand/g3.webp',
+  3: '/brand/g4.webp',
+  4: '/brand/g5.webp'
+}
+
+const guimarpeixeRecipes = {
+  pt: {
+    eyebrow: 'Guimarpeixe / Receitas', title: 'Receitas para\npartilhar.', lead: 'Ideias simples para levar os produtos Guimarpeixe à mesa, com sabor e praticidade.', difficulty: 'Dificuldade', time: 'Tempo de preparação', portions: 'Porções', minutes: 'min',
+    recipes: [
+      { slug: 'sardinhas-em-escabeche', name: 'Sardinhas em Escabeche', difficulty: 'Média', time: '60', portions: '4', image: 'https://images.unsplash.com/photo-1656389863341-1dfd38ee6edc?auto=format&fit=crop&w=1400&q=85' },
+      { slug: 'moqueca-de-cacao', name: 'Moqueca de Cação', difficulty: 'Média', time: '40', portions: '4', image: 'https://www.guiadasemana.com.br/contentFiles/image/2022/03/FEA/68367_shutterstock-1903614613.jpg' },
+      { slug: 'medalhao-de-cacao-grelhado', name: 'Medalhão de Cação Grelhado', difficulty: 'Fácil', time: '15', portions: '2', image: 'https://resizer.otstatic.com/v3/photos/42386428-1' },
+      { slug: 'cacao-grelhado', name: 'Cação Grelhado', difficulty: 'Fácil', time: '15', portions: '2', image: 'https://images.unsplash.com/photo-1656389863341-1dfd38ee6edc?auto=format&fit=crop&w=1400&q=85' }
+    ]
+  },
+  en: {
+    eyebrow: 'Guimarpeixe / Recipes', title: 'Recipes to\nshare.', lead: 'Simple ideas for bringing Guimarpeixe products to the table with flavour and ease.', difficulty: 'Difficulty', time: 'Preparation time', portions: 'Servings', minutes: 'min',
+    recipes: [
+      { slug: 'sardinhas-em-escabeche', name: 'Sardines in Escabeche', difficulty: 'Medium', time: '60', portions: '4', image: 'https://images.unsplash.com/photo-1656389863341-1dfd38ee6edc?auto=format&fit=crop&w=1400&q=85' },
+      { slug: 'moqueca-de-cacao', name: 'Dogfish moqueca', difficulty: 'Medium', time: '40', portions: '4', image: 'https://www.guiadasemana.com.br/contentFiles/image/2022/03/FEA/68367_shutterstock-1903614613.jpg' },
+      { slug: 'medalhao-de-cacao-grelhado', name: 'Grilled dogfish medallion', difficulty: 'Easy', time: '15', portions: '2', image: 'https://resizer.otstatic.com/v3/photos/42386428-1' },
+      { slug: 'cacao-grelhado', name: 'Grilled dogfish', difficulty: 'Easy', time: '15', portions: '2', image: 'https://images.unsplash.com/photo-1656389863341-1dfd38ee6edc?auto=format&fit=crop&w=1400&q=85' }
+    ]
+  },
+  es: {
+    eyebrow: 'Guimarpeixe / Recetas', title: 'Recetas para\ncompartir.', lead: 'Ideas sencillas para llevar los productos Guimarpeixe a la mesa, con sabor y practicidad.', difficulty: 'Dificultad', time: 'Tiempo de preparación', portions: 'Porciones', minutes: 'min',
+    recipes: [
+      { slug: 'sardinhas-em-escabeche', name: 'Sardinas en escabeche', difficulty: 'Media', time: '60', portions: '4', image: 'https://images.unsplash.com/photo-1656389863341-1dfd38ee6edc?auto=format&fit=crop&w=1400&q=85' },
+      { slug: 'moqueca-de-cacao', name: 'Moqueca de cazón', difficulty: 'Media', time: '40', portions: '4', image: 'https://www.guiadasemana.com.br/contentFiles/image/2022/03/FEA/68367_shutterstock-1903614613.jpg' },
+      { slug: 'medalhao-de-cacao-grelhado', name: 'Medallón de cazón a la parrilla', difficulty: 'Fácil', time: '15', portions: '2', image: 'https://resizer.otstatic.com/v3/photos/42386428-1' },
+      { slug: 'cacao-grelhado', name: 'Cazón a la parrilla', difficulty: 'Fácil', time: '15', portions: '2', image: 'https://images.unsplash.com/photo-1656389863341-1dfd38ee6edc?auto=format&fit=crop&w=1400&q=85' }
+    ]
+  }
+}
+
+const recipeDetails = {
+  pt: {
+    back: '← Voltar às receitas', ingredients: 'Ingredientes', method: 'Modo de preparação',
+    recipes: {
+      'sardinhas-em-escabeche': { ingredients: ['Sal a gosto', '4 sardinhas', '½ pimento vermelho', '½ pimento verde', '4 fatias de broa', 'Azeite a gosto', '2 colheres de sopa de vinagre', '1 colher de café de pimentão doce', '3 folhas de louro', '½ cebola às rodelas', '2 alhos laminados', 'Água (o suficiente)'], steps: ['Limpe as sardinhas e tempere com sal e sumo de limão.', 'Numa panela, aqueça azeite e frite as sardinhas rapidamente. Reserve.', 'Na mesma panela, adicione cebola, alho, cenoura e pimentão. Refogue.', 'Acrescente vinagre, água, louro e temperos. Cozinhe por alguns minutos.', 'Coloque as sardinhas de volta na panela e cozinhe em lume brando por 10 a 15 minutos.'] },
+      'moqueca-de-cacao': { ingredients: ['300g de cação', '¼ pimento vermelho', '¼ pimento verde', '½ tomate às rodelas', '1 cebola às rodelas', '100ml de vinho branco', '2 colheres de chá de óleo de palma', '1 malagueta', 'Sal a gosto', '90ml de leite de coco', 'Coentros a gosto', '100g de caju'], steps: ['Tempere o cação com limão, sal e pimenta. Reserve.', 'Numa panela, aqueça azeite e refogue cebola e alho.', 'Adicione pimento, tomate, coentros e leite de coco. Cozinhe até os legumes amolecerem.', 'Acrescente o cação e cozinhe por cerca de 15 a 20 minutos.'] },
+      'medalhao-de-cacao-grelhado': { ingredients: ['1 medalhão de cação', '4 batatas às rodelas', '100g de brócolos', '1 limão', 'Pimenta a gosto', 'Sal a gosto', 'Azeite a gosto', '50g de manteiga'], steps: ['Tempere os medalhões de cação com sal, pimenta e sumo de limão.', 'Aqueça uma grelha ou frigideira com um pouco de azeite.', 'Grelhe os medalhões durante cerca de 3 a 4 minutos de cada lado, até dourarem.'] },
+      'cacao-grelhado': { ingredients: ['4 batatas', '2 lombos de cação', '100g de brócolos', '1 limão', 'Pimenta a gosto', 'Sal a gosto', 'Azeite a gosto', 'Cação'], steps: ['Tempere o cação com sal, pimenta e limão.', 'Aqueça uma grelha ou frigideira com azeite.', 'Grelhe durante 5 a 7 minutos de cada lado, até estar cozinhado.'] }
+    }
+  },
+  en: {
+    back: '← Back to recipes', ingredients: 'Ingredients', method: 'Method',
+    recipes: {
+      'sardinhas-em-escabeche': { ingredients: ['Salt to taste', '4 sardines', '½ red pepper', '½ green pepper', '4 slices of cornbread', 'Olive oil to taste', '2 tablespoons vinegar', '1 teaspoon sweet paprika', '3 bay leaves', '½ sliced onion', '2 sliced garlic cloves', 'Water (as needed)'], steps: ['Clean the sardines and season with salt and lemon juice.', 'Heat olive oil in a pan and quickly fry the sardines. Set aside.', 'In the same pan, add onion, garlic, carrot and pepper. Sauté.', 'Add vinegar, water, bay leaves and seasonings. Cook for a few minutes.', 'Return the sardines to the pan and cook over a low heat for 10 to 15 minutes.'] },
+      'moqueca-de-cacao': { ingredients: ['300g dogfish', '¼ red pepper', '¼ green pepper', '½ sliced tomato', '1 sliced onion', '100ml white wine', '2 teaspoons palm oil', '1 chilli pepper', 'Salt to taste', '90ml coconut milk', 'Coriander to taste', '100g cashew nuts'], steps: ['Season the dogfish with lemon, salt and pepper. Set aside.', 'Heat olive oil in a pan and sauté the onion and garlic.', 'Add pepper, tomato, coriander and coconut milk. Cook until the vegetables soften.', 'Add the dogfish and cook for around 15 to 20 minutes.'] },
+      'medalhao-de-cacao-grelhado': { ingredients: ['1 dogfish medallion', '4 sliced potatoes', '100g broccoli', '1 lemon', 'Pepper to taste', 'Salt to taste', 'Olive oil to taste', '50g butter'], steps: ['Season the dogfish medallions with salt, pepper and lemon juice.', 'Heat a grill or frying pan with a little olive oil.', 'Grill the medallions for around 3 to 4 minutes on each side, until golden.'] },
+      'cacao-grelhado': { ingredients: ['4 potatoes', '2 dogfish fillets', '100g broccoli', '1 lemon', 'Pepper to taste', 'Salt to taste', 'Olive oil to taste', 'Dogfish'], steps: ['Season the dogfish with salt, pepper and lemon.', 'Heat a grill or frying pan with olive oil.', 'Grill for 5 to 7 minutes on each side, until cooked through.'] }
+    }
+  },
+  es: {
+    back: '← Volver a recetas', ingredients: 'Ingredientes', method: 'Modo de preparación',
+    recipes: {
+      'sardinhas-em-escabeche': { ingredients: ['Sal al gusto', '4 sardinas', '½ pimiento rojo', '½ pimiento verde', '4 rebanadas de pan de maíz', 'Aceite de oliva al gusto', '2 cucharadas de vinagre', '1 cucharadita de pimentón dulce', '3 hojas de laurel', '½ cebolla en rodajas', '2 dientes de ajo laminados', 'Agua (la necesaria)'], steps: ['Limpie las sardinas y condimente con sal y zumo de limón.', 'Caliente aceite de oliva en una sartén y fría las sardinas rápidamente. Reserve.', 'En la misma sartén, añada cebolla, ajo, zanahoria y pimiento. Sofría.', 'Añada vinagre, agua, laurel y condimentos. Cocine unos minutos.', 'Vuelva a poner las sardinas en la sartén y cocine a fuego bajo durante 10 a 15 minutos.'] },
+      'moqueca-de-cacao': { ingredients: ['300g de cazón', '¼ pimiento rojo', '¼ pimiento verde', '½ tomate en rodajas', '1 cebolla en rodajas', '100ml de vino blanco', '2 cucharaditas de aceite de palma', '1 guindilla', 'Sal al gusto', '90ml de leche de coco', 'Cilantro al gusto', '100g de anacardos'], steps: ['Condimente el cazón con limón, sal y pimienta. Reserve.', 'Caliente aceite de oliva en una sartén y sofría la cebolla y el ajo.', 'Añada pimiento, tomate, cilantro y leche de coco. Cocine hasta que las verduras se ablanden.', 'Añada el cazón y cocine durante unos 15 a 20 minutos.'] },
+      'medalhao-de-cacao-grelhado': { ingredients: ['1 medallón de cazón', '4 patatas en rodajas', '100g de brócoli', '1 limón', 'Pimienta al gusto', 'Sal al gusto', 'Aceite de oliva al gusto', '50g de mantequilla'], steps: ['Condimente los medallones de cazón con sal, pimienta y zumo de limón.', 'Caliente una parrilla o sartén con un poco de aceite de oliva.', 'Asa los medallones durante 3 a 4 minutos por cada lado, hasta dorar.'] },
+      'cacao-grelhado': { ingredients: ['4 patatas', '2 lomos de cazón', '100g de brócoli', '1 limón', 'Pimienta al gusto', 'Sal al gusto', 'Aceite de oliva al gusto', 'Cazón'], steps: ['Condimente el cazón con sal, pimienta y limón.', 'Caliente una parrilla o sartén con aceite de oliva.', 'Asa durante 5 a 7 minutos por cada lado, hasta que esté cocinado.'] }
+    }
+  }
+}
+
 const postTranslations = {
   'financiamento-pme-portuguesa': {
     en: { title: 'What financing does a Portuguese SME need?', subtitle: 'Practical diagnosis and debt monitoring.', date: 'July 2012', intro: 'Growing, increasing sales and maintaining liquidity do not always move at the same pace. This study addresses working-capital needs and the importance of monitoring debt in small and medium-sized businesses.', sections: [{ heading: 'Financing the business cycle', paragraphs: ['A company needs capital to finance its structure and operations. Between buying raw materials, producing, holding inventory, delivering and collecting from customers, there is an operating cycle that consumes resources.', 'Financing needs are not static: they vary with sales volume, inventory turnover, credit granted to customers and terms negotiated with suppliers. Tracking these variables supports decisions before cash pressure emerges.'] }, { heading: 'Working-capital requirements', paragraphs: ['The diagnosis proposes a simple reading of the short-term position: WCR = Customers + Inventory - Suppliers. When the result is positive, the company needs additional resources to bridge the gap between paying and collecting.', 'The formula does not replace management analysis, but turns accounting data into a useful indicator for anticipating needs and discussing credit solutions, equity or renegotiated terms.'] }, { heading: 'Monitoring to make better decisions', paragraphs: ['Average collection and payment periods and inventory turnover should be observed together. A commercial improvement that increases sales may, for example, demand more inventory and more customer credit, temporarily worsening liquidity needs.', 'Continuous monitoring helps balance growth, risk and financial capacity. For an SME, this discipline makes the effects of day-to-day decisions visible and supports a more transparent relationship with financial partners.'] }] },
@@ -141,6 +262,28 @@ function ContactIcon({ type }) {
     pin: <><path d="M12 21s6-5.4 6-11a6 6 0 1 0-12 0c0 5.6 6 11 6 11Z" /><circle cx="12" cy="10" r="2" /></>
   }
   return <svg aria-hidden="true" viewBox="0 0 24 24">{paths[type]}</svg>
+}
+
+function IngredientIcon({ type }) {
+  const paths = {
+    lemon: <><circle cx="12" cy="12" r="7.5" /><path d="M6.7 6.8 17.3 17.2M12 4.5v15M4.5 12h15" /></>,
+    fish: <><path d="M4 12c3.1-4.2 8.8-4.2 12 0-3.2 4.2-8.9 4.2-12 0Z" /><path d="m16 12 4-3v6l-4-3ZM9 11.5h.01" /></>,
+    produce: <><path d="M6 18c0-6.5 4.3-10.5 11-12-1.3 6.5-5 10.4-11 12Z" /><path d="M7 17c2.8-3 5.2-5.3 8.5-7.5" /></>,
+    starch: <><path d="M12 4c4.5 1.8 6.5 5.1 5.2 9.4-1 3.5-3.2 6-5.2 6.6-2-1-4.2-3.1-5.2-6.6C5.5 9.1 7.5 5.8 12 4Z" /><path d="M9.2 9.5c1.7.6 3.9.6 5.6 0M9.2 13c1.7.6 3.9.6 5.6 0" /></>,
+    liquid: <><path d="M12 3.5S6.7 10 6.7 14.1a5.3 5.3 0 1 0 10.6 0C17.3 10 12 3.5 12 3.5Z" /><path d="M9.4 15.3c.5 1.1 1.4 1.7 2.6 1.8" /></>,
+    seasoning: <><circle cx="12" cy="12" r="7" /><path d="M12 8v8M8 12h8" /></>
+  }
+  return <svg className="ingredient-icon" aria-hidden="true" viewBox="0 0 24 24">{paths[type]}</svg>
+}
+
+function getIngredientType(ingredient) {
+  const value = ingredient.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase()
+  if (value.includes('limao') || value.includes('lemon')) return 'lemon'
+  if (value.includes('sard') || value.includes('cacao') || value.includes('dogfish') || value.includes('fish')) return 'fish'
+  if (/(piment|tomate|cebola|alho|brocol|coentr|caju|chilli|pepper|onion|garlic|carrot|vegetable)/.test(value)) return 'produce'
+  if (/(batata|potato|broa|bread)/.test(value)) return 'starch'
+  if (/(azeite|oil|vinho|wine|vinagre|vinegar|leite|milk|agua|water)/.test(value)) return 'liquid'
+  return 'seasoning'
 }
 
 function Header({ language, setLanguage }) {
@@ -174,6 +317,8 @@ function SearchPanel({ onClose, t, language }) {
   const [value, setValue] = useState('')
   const c = pageContent[language]
   const about = aboutContent[language]
+  const guimarpeixe = guimarpeixeProducts[language]
+  const recipes = guimarpeixeRecipes[language]
   useEffect(() => {
     const previousOverflow = document.body.style.overflow
     document.body.style.overflow = 'hidden'
@@ -187,6 +332,9 @@ function SearchPanel({ onClose, t, language }) {
     { to: '/industrias', title: t.industries, type: resultTypes.page, content: `${c.industries.title} ${c.industries.text}` },
     { to: '/contactos', title: t.contact, type: resultTypes.page, content: `${c.contact.text} Faro Aveiro Gafanha Nazaré Avenida 5 de Outubro Travessa Mestre Mónica` },
     { to: '/area-reservada', title: t.reserved, type: resultTypes.page, content: c.reserved.text },
+    { to: '/industrias/guimarpeixe/produtos', title: `Guimarpeixe · ${guimarpeixe.listLabel}`, type: resultTypes.industry, content: `${guimarpeixe.intro} ${guimarpeixe.products.map((product) => `${product.name} ${product.text}`).join(' ')}` },
+    { to: '/industrias/guimarpeixe/receitas', title: `Guimarpeixe · ${recipes.eyebrow.split(' / ')[1]}`, type: resultTypes.industry, content: `${recipes.lead} ${recipes.recipes.map((recipe) => `${recipe.name} ${recipe.difficulty} ${recipe.time}`).join(' ')}` },
+    ...recipes.recipes.map((recipe) => ({ to: `/industrias/guimarpeixe/receitas/${recipe.slug}`, title: recipe.name, type: resultTypes.industry, content: `${recipe.difficulty} ${recipe.time} ${recipe.portions} ${recipeDetails[language].recipes[recipe.slug].ingredients.join(' ')} ${recipeDetails[language].recipes[recipe.slug].steps.join(' ')}` })),
     ...industryDirectory.map((industry) => { const item = getIndustry(industry, language); return { to: '/industrias', title: item.name, type: resultTypes.industry, content: `${item.name} ${item.description} ${Object.values(c.industries.actions).join(' ')}` } }),
     ...blogPosts.map((post) => { const item = getPost(post, language); return { to: `/blog/${item.slug}`, title: item.title, type: resultTypes.publication, content: `${item.subtitle} ${item.author} ${item.intro} ${item.sections.flatMap((section) => [section.heading, ...section.paragraphs]).join(' ')} ${postCategories[item.slug]?.map((id) => getCategoryLabel(blogCategories.find((category) => category.id === id), language)).join(' ')}` } }),
     ...blogCategories.filter((category) => category.id !== 'all').map((category) => ({ to: `/blog?categoria=${category.id}`, title: getCategoryLabel(category, language), type: resultTypes.category, content: `blog publicação ${getCategoryLabel(category, language)}` }))
@@ -249,7 +397,29 @@ function MiguelPage({ language }) {
 }
 function IndustriesPage({ language }) {
   const c = pageContent[language]
-  return <section className="industries-page"><div className="industries-heading"><p className="section-label">{c.industries.eyebrow}</p><h1>{c.industries.title.split('\n').map((line, index) => <span key={line}>{index === 1 ? <em>{line}</em> : line}{index === 0 && <br />}</span>)}</h1><p>{c.industries.text}</p></div><div className="industry-grid">{industryDirectory.map((sourceIndustry) => { const industry = getIndustry(sourceIndustry, language); return <article className={["industry-card", industry.pending && 'pending', industry.blueLogo && 'blue-logo'].filter(Boolean).join(' ')} key={industry.name}><div className="industry-logo"><img src={industry.image} alt={industry.name} /></div><div className="industry-card-content"><h2>{industry.name}</h2><p>{industry.description}</p>{industry.pending && <span className="pending-badge">{language === 'pt' ? 'Em formalização' : language === 'en' ? 'Being formalised' : 'En formalización'}</span>}<div className="industry-actions"><Link to={`/industrias/${industry.slug}/produtos`}>{c.industries.actions.produtos}</Link><Link to={`/industrias/${industry.slug}/receitas`}>{c.industries.actions.receitas}</Link><Link to={`/industrias/${industry.slug}/catalogo`}>{c.industries.actions.catalogo}</Link></div></div></article> })}</div></section>
+  const guimarpeixe = guimarpeixeProducts[language]
+  return <section className="industries-page"><div className="industries-heading"><p className="section-label">{c.industries.eyebrow}</p><h1>{c.industries.title.split('\n').map((line, index) => <span key={line}>{index === 1 ? <em>{line}</em> : line}{index === 0 && <br />}</span>)}</h1><p>{c.industries.text}</p></div><div className="industry-grid">{industryDirectory.map((sourceIndustry) => { const industry = getIndustry(sourceIndustry, language); return <article className={["industry-card", industry.pending && 'pending', industry.blueLogo && 'blue-logo'].filter(Boolean).join(' ')} key={industry.name}><div className="industry-logo"><img src={industry.image} alt={industry.name} /></div><div className="industry-card-content"><h2>{industry.name}</h2><p>{industry.description}</p>{industry.pending && <span className="pending-badge">{language === 'pt' ? 'Em formalização' : language === 'en' ? 'Being formalised' : 'En formalización'}</span>}<div className="industry-actions"><Link to={`/industrias/${industry.slug}/produtos`}>{c.industries.actions.produtos}</Link><Link to={`/industrias/${industry.slug}/receitas`}>{c.industries.actions.receitas}</Link>{industry.slug === 'guimarpeixe' ? <a href="/brand/Catalogo-Guimarpeixe.pdf" target="_blank" rel="noreferrer">{guimarpeixe.catalogueLabel}</a> : <Link to={`/industrias/${industry.slug}/catalogo`}>{c.industries.actions.catalogo}</Link>}</div></div></article> })}</div></section>
+}
+function GuimarpeixeProductsPage({ language }) {
+  const c = pageContent[language]
+  const products = guimarpeixeProducts[language]
+  const recipesLink = language === 'en' ? 'Explore recipes' : language === 'es' ? 'Explorar recetas' : 'Explorar receitas'
+  const recipesTitle = language === 'en' ? 'Bring more flavour to the table.' : language === 'es' ? 'Más sabor en la mesa.' : 'Mais sabor à mesa.'
+  const recipesText = language === 'en' ? 'Discover simple ideas made with Guimarpeixe products.' : language === 'es' ? 'Descubra ideas sencillas elaboradas con productos Guimarpeixe.' : 'Descubra sugestões simples feitas com produtos Guimarpeixe.'
+  return <article className="guimarpeixe-products"><section className="gp-products-hero"><Link className="back-link" to="/industrias">{c.industries.back}</Link><div className="gp-products-brand"><img src="/brand/guimarpeixe.svg" alt="Guimarpeixe" /></div><p className="section-label">{products.eyebrow}</p><h1>{products.title}</h1><p>{products.intro}</p></section><section className="gp-products-list"><header><p className="section-label">{products.listLabel}</p><h2>{language === 'en' ? 'Selected with care.' : language === 'es' ? 'Seleccionados con cuidado.' : 'Selecionados com rigor.'}</h2></header><div>{products.products.map((product, index) => { const image = guimarpeixeProductImages[index]; return <article className={image ? 'gp-product-card has-image' : 'gp-product-card'} key={product.name}><span>{String(index + 1).padStart(2, '0')}</span><div><h3>{product.name}</h3><p>{product.text}</p></div>{image && <img src={image} alt="" />}</article> })}</div></section><section className="gp-recipes-prompt"><div><p className="section-label">{language === 'en' ? 'Guimarpeixe recipes' : language === 'es' ? 'Recetas Guimarpeixe' : 'Receitas Guimarpeixe'}</p><h2>{recipesTitle}</h2><p>{recipesText}</p></div><Link to="/industrias/guimarpeixe/receitas">{recipesLink} <span>→</span></Link></section><section className="gp-catalogue"><div><p className="section-label">{products.catalogueLabel}</p><h2>{products.catalogueTitle}</h2><p>{products.catalogueText}</p></div><a href="/brand/Catalogo-Guimarpeixe.pdf" target="_blank" rel="noreferrer">{products.download} <span>↗</span></a></section></article>
+}
+function GuimarpeixeRecipesPage({ language }) {
+  const content = guimarpeixeRecipes[language]
+  return <article className="guimarpeixe-recipes"><section className="gp-recipes-hero"><Link className="back-link" to="/industrias/guimarpeixe/produtos">{language === 'en' ? '← Back to products' : language === 'es' ? '← Volver a productos' : '← Voltar aos produtos'}</Link><div className="gp-products-brand"><img src="/brand/guimarpeixe.svg" alt="Guimarpeixe" /></div><p className="section-label">{content.eyebrow}</p><h1>{content.title.split('\n').map((line, index) => <span key={line}>{line}{index === 0 && <br />}</span>)}</h1><p>{content.lead}</p></section><section className="gp-recipe-list">{content.recipes.map((recipe, index) => <Link className="gp-recipe-card" to={`/industrias/guimarpeixe/receitas/${recipe.slug}`} key={recipe.slug}><div className="gp-recipe-image"><img src={recipe.image} alt={recipe.name} /><span>{String(index + 1).padStart(2, '0')}</span></div><div className="gp-recipe-copy"><h2>{recipe.name}</h2><dl><div><dt>{content.difficulty}</dt><dd>{recipe.difficulty}</dd></div><div><dt>{content.time}</dt><dd>{recipe.time} {content.minutes}</dd></div><div><dt>{content.portions}</dt><dd>{recipe.portions}</dd></div></dl><span className="gp-recipe-open">{language === 'en' ? 'View recipe' : language === 'es' ? 'Ver receta' : 'Ver receita'} <b>→</b></span></div></Link>)}</section></article>
+}
+function GuimarpeixeRecipeDetailPage({ language }) {
+  const { recipe: slug } = useParams()
+  const listing = guimarpeixeRecipes[language].recipes.find((item) => item.slug === slug)
+  const details = recipeDetails[language].recipes[slug]
+  const copy = recipeDetails[language]
+  const labels = guimarpeixeRecipes[language]
+  if (!listing || !details) return <StandardPage eyebrow="Guimarpeixe" title={language === 'en' ? 'Recipe not found' : language === 'es' ? 'Receta no encontrada' : 'Receita não encontrada'} text={language === 'en' ? 'This recipe is not available.' : language === 'es' ? 'Esta receta no está disponible.' : 'Esta receita não está disponível.'} />
+  return <article className="recipe-detail-page"><header className="recipe-detail-hero"><Link className="back-link" to="/industrias/guimarpeixe/receitas">{copy.back}</Link><div className="recipe-detail-grid"><figure><img src={listing.image} alt={listing.name} /></figure><div className="recipe-detail-summary"><p className="section-label">Guimarpeixe / {labels.eyebrow.split(' / ')[1]}</p><span className="recipe-detail-number">{String(labels.recipes.findIndex((item) => item.slug === slug) + 1).padStart(2, '0')}</span><h1>{listing.name}</h1><dl><div><dt>{labels.difficulty}</dt><dd>{listing.difficulty}</dd></div><div><dt>{labels.time}</dt><dd>{listing.time} {labels.minutes}</dd></div><div><dt>{labels.portions}</dt><dd>{listing.portions}</dd></div></dl></div></div></header><section className="recipe-detail-body"><aside className="ingredient-panel"><p className="section-label">01 / {copy.ingredients}</p><h2>{copy.ingredients}</h2><ul>{details.ingredients.map((ingredient) => <li key={ingredient}><IngredientIcon type={getIngredientType(ingredient)} /><span>{ingredient}</span></li>)}</ul></aside><section className="recipe-method"><p className="section-label">02 / {copy.method}</p><h2>{copy.method}</h2><ol>{details.steps.map((step) => <li key={step}>{step}</li>)}</ol></section></section></article>
 }
 function IndustryContentPage({ language }) {
   const { industry: industrySlug, section } = useParams()
@@ -258,6 +428,8 @@ function IndustryContentPage({ language }) {
   const industry = sourceIndustry && getIndustry(sourceIndustry, language)
   const sectionName = c.industries.actions[section]
   if (!industry || !sectionName) return <StandardPage eyebrow={c.industries.eyebrow} title={language === 'en' ? 'Page not found' : language === 'es' ? 'Página no encontrada' : 'Página não encontrada'} text={language === 'en' ? 'This content is not available.' : language === 'es' ? 'Este contenido no está disponible.' : 'Este conteúdo não está disponível.'} />
+  if (industrySlug === 'guimarpeixe' && section === 'produtos') return <GuimarpeixeProductsPage language={language} />
+  if (industrySlug === 'guimarpeixe' && section === 'receitas') return <GuimarpeixeRecipesPage language={language} />
   return <section className="industry-detail-page"><div className="industry-detail-hero"><Link className="back-link" to="/industrias">{c.industries.back}</Link><div className={industry.blueLogo ? 'detail-logo blue-logo' : 'detail-logo'}><img src={industry.image} alt={industry.name} /></div><p className="section-label">{industry.name}</p><h1>{sectionName}</h1><p>{industry.description}</p></div><div className="industry-detail-empty"><span>{c.industries.comingSoon}</span><h2>{sectionName} {industry.name}</h2><p>{c.industries.detailText}</p></div></section>
 }
 function BlogPage({ language }) {
@@ -298,7 +470,7 @@ function ScrollToTop() {
 function App() {
   const [language, setLanguage] = useState('pt')
   const t = copy[language]
-  return <div className="app"><ScrollToTop /><Header language={language} setLanguage={setLanguage} /><main><Routes><Route path="/" element={<Home t={t} language={language} />} /><Route path="/sobre-nos" element={<AboutPage t={t} language={language} />} /><Route path="/miguel-bregieira" element={<MiguelPage language={language} />} /><Route path="/industrias" element={<IndustriesPage language={language} />} /><Route path="/industrias/:industry/:section" element={<IndustryContentPage language={language} />} /><Route path="/blog" element={<BlogPage language={language} />} /><Route path="/blog/:slug" element={<BlogPostPage language={language} />} /><Route path="/contactos" element={<ContactPage t={t} language={language} />} /><Route path="/area-reservada" element={<ReservedPage t={t} language={language} />} /></Routes></main><Footer t={t} language={language} /></div>
+  return <div className="app"><ScrollToTop /><Header language={language} setLanguage={setLanguage} /><main><Routes><Route path="/" element={<Home t={t} language={language} />} /><Route path="/sobre-nos" element={<AboutPage t={t} language={language} />} /><Route path="/miguel-bregieira" element={<MiguelPage language={language} />} /><Route path="/industrias" element={<IndustriesPage language={language} />} /><Route path="/industrias/guimarpeixe/receitas/:recipe" element={<GuimarpeixeRecipeDetailPage language={language} />} /><Route path="/industrias/:industry/:section" element={<IndustryContentPage language={language} />} /><Route path="/blog" element={<BlogPage language={language} />} /><Route path="/blog/:slug" element={<BlogPostPage language={language} />} /><Route path="/contactos" element={<ContactPage t={t} language={language} />} /><Route path="/area-reservada" element={<ReservedPage t={t} language={language} />} /></Routes></main><Footer t={t} language={language} /></div>
 }
 
 createRoot(document.getElementById('root')).render(<BrowserRouter><App /></BrowserRouter>)

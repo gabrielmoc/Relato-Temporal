@@ -527,7 +527,7 @@ function MiguelPage({ language }) {
   return <article className="profile-page">
     <section className="profile-intro">
       <div className="profile-title"><p className="section-label">{c.miguel.eyebrow}</p><h1>Miguel<br /><em>Bregieira</em></h1><p>{c.miguel.tagline}</p></div>
-      <figure><img src="/brand/miguel.jpeg" alt="Miguel Bregieira" /><figcaption>Relato Temporal</figcaption></figure>
+      <figure><img src="/brand/miguel-retouched.png" alt="Miguel Bregieira" /><figcaption>Miguel Bregieira</figcaption></figure>
     </section>
     <section className="profile-biography">
       <p className="profile-pull">{c.miguel.pull}</p>

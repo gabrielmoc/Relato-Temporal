@@ -299,6 +299,13 @@ const superfishRecipes = {
   }
 }
 
+const superfishRecipeImages = ['/brand/super1.webp', '/brand/super2.webp', '/brand/super3.webp', '/brand/super4.webp', '/brand/super5.webp', '/brand/super6.webp', '/brand/super7.webp']
+Object.values(superfishRecipes).forEach((content) => {
+  content.recipes.forEach((recipe, index) => {
+    recipe.image = superfishRecipeImages[index]
+  })
+})
+
 const superfishRecipeDetails = {
   back: '← Voltar às receitas', ingredients: 'Ingredientes', method: 'Modo de preparação',
   recipes: {
@@ -316,31 +323,38 @@ const guimarpeixeRecipes = {
   pt: {
     eyebrow: 'Guimarpeixe / Receitas', title: 'Receitas para\npartilhar.', lead: 'Ideias simples para levar os produtos Guimarpeixe à mesa, com sabor e praticidade.', difficulty: 'Dificuldade', time: 'Tempo de preparação', portions: 'Porções', minutes: 'min',
     recipes: [
-      { slug: 'sardinhas-em-escabeche', name: 'Sardinhas em Escabeche', difficulty: 'Média', time: '60', portions: '4', image: 'https://images.unsplash.com/photo-1656389863341-1dfd38ee6edc?auto=format&fit=crop&w=1400&q=85' },
-      { slug: 'moqueca-de-cacao', name: 'Moqueca de Cação', difficulty: 'Média', time: '40', portions: '4', image: 'https://www.guiadasemana.com.br/contentFiles/image/2022/03/FEA/68367_shutterstock-1903614613.jpg' },
-      { slug: 'medalhao-de-cacao-grelhado', name: 'Medalhão de Cação Grelhado', difficulty: 'Fácil', time: '15', portions: '2', image: 'https://resizer.otstatic.com/v3/photos/42386428-1' },
-      { slug: 'cacao-grelhado', name: 'Cação Grelhado', difficulty: 'Fácil', time: '15', portions: '2', image: 'https://images.unsplash.com/photo-1656389863341-1dfd38ee6edc?auto=format&fit=crop&w=1400&q=85' }
+      { slug: 'sardinhas-em-escabeche', name: 'Sardinhas em Escabeche', difficulty: 'Média', time: '60', portions: '4', image: '/brand/gui1.webp' },
+      { slug: 'moqueca-de-cacao', name: 'Moqueca de Cação', difficulty: 'Média', time: '40', portions: '4', image: '/brand/gui2.webp' },
+      { slug: 'medalhao-de-cacao-grelhado', name: 'Medalhão de Cação Grelhado', difficulty: 'Fácil', time: '15', portions: '2', image: '/brand/gui3.webp' },
+      { slug: 'cacao-grelhado', name: 'Cação Grelhado', difficulty: 'Fácil', time: '15', portions: '2', image: '/brand/gui4.webp' }
     ]
   },
   en: {
     eyebrow: 'Guimarpeixe / Recipes', title: 'Recipes to\nshare.', lead: 'Simple ideas for bringing Guimarpeixe products to the table with flavour and ease.', difficulty: 'Difficulty', time: 'Preparation time', portions: 'Servings', minutes: 'min',
     recipes: [
-      { slug: 'sardinhas-em-escabeche', name: 'Sardines in Escabeche', difficulty: 'Medium', time: '60', portions: '4', image: 'https://images.unsplash.com/photo-1656389863341-1dfd38ee6edc?auto=format&fit=crop&w=1400&q=85' },
-      { slug: 'moqueca-de-cacao', name: 'Dogfish moqueca', difficulty: 'Medium', time: '40', portions: '4', image: 'https://www.guiadasemana.com.br/contentFiles/image/2022/03/FEA/68367_shutterstock-1903614613.jpg' },
-      { slug: 'medalhao-de-cacao-grelhado', name: 'Grilled dogfish medallion', difficulty: 'Easy', time: '15', portions: '2', image: 'https://resizer.otstatic.com/v3/photos/42386428-1' },
-      { slug: 'cacao-grelhado', name: 'Grilled dogfish', difficulty: 'Easy', time: '15', portions: '2', image: 'https://images.unsplash.com/photo-1656389863341-1dfd38ee6edc?auto=format&fit=crop&w=1400&q=85' }
+      { slug: 'sardinhas-em-escabeche', name: 'Sardines in Escabeche', difficulty: 'Medium', time: '60', portions: '4', image: '/brand/gui1.webp' },
+      { slug: 'moqueca-de-cacao', name: 'Dogfish moqueca', difficulty: 'Medium', time: '40', portions: '4', image: '/brand/gui2.webp' },
+      { slug: 'medalhao-de-cacao-grelhado', name: 'Grilled dogfish medallion', difficulty: 'Easy', time: '15', portions: '2', image: '/brand/gui3.webp' },
+      { slug: 'cacao-grelhado', name: 'Grilled dogfish', difficulty: 'Easy', time: '15', portions: '2', image: '/brand/gui4.webp' }
     ]
   },
   es: {
     eyebrow: 'Guimarpeixe / Recetas', title: 'Recetas para\ncompartir.', lead: 'Ideas sencillas para llevar los productos Guimarpeixe a la mesa, con sabor y practicidad.', difficulty: 'Dificultad', time: 'Tiempo de preparación', portions: 'Porciones', minutes: 'min',
     recipes: [
-      { slug: 'sardinhas-em-escabeche', name: 'Sardinas en escabeche', difficulty: 'Media', time: '60', portions: '4', image: 'https://images.unsplash.com/photo-1656389863341-1dfd38ee6edc?auto=format&fit=crop&w=1400&q=85' },
-      { slug: 'moqueca-de-cacao', name: 'Moqueca de cazón', difficulty: 'Media', time: '40', portions: '4', image: 'https://www.guiadasemana.com.br/contentFiles/image/2022/03/FEA/68367_shutterstock-1903614613.jpg' },
-      { slug: 'medalhao-de-cacao-grelhado', name: 'Medallón de cazón a la parrilla', difficulty: 'Fácil', time: '15', portions: '2', image: 'https://resizer.otstatic.com/v3/photos/42386428-1' },
-      { slug: 'cacao-grelhado', name: 'Cazón a la parrilla', difficulty: 'Fácil', time: '15', portions: '2', image: 'https://images.unsplash.com/photo-1656389863341-1dfd38ee6edc?auto=format&fit=crop&w=1400&q=85' }
+      { slug: 'sardinhas-em-escabeche', name: 'Sardinas en escabeche', difficulty: 'Media', time: '60', portions: '4', image: '/brand/gui1.webp' },
+      { slug: 'moqueca-de-cacao', name: 'Moqueca de cazón', difficulty: 'Media', time: '40', portions: '4', image: '/brand/gui2.webp' },
+      { slug: 'medalhao-de-cacao-grelhado', name: 'Medallón de cazón a la parrilla', difficulty: 'Fácil', time: '15', portions: '2', image: '/brand/gui3.webp' },
+      { slug: 'cacao-grelhado', name: 'Cazón a la parrilla', difficulty: 'Fácil', time: '15', portions: '2', image: '/brand/gui4.webp' }
     ]
   }
 }
+
+const guimarpeixeRecipeImages = ['/brand/gui1-hires.png', '/brand/gui2-hires.png', '/brand/gui3-hires.png', '/brand/gui4-hires.png']
+Object.values(guimarpeixeRecipes).forEach((content) => {
+  content.recipes.forEach((recipe, index) => {
+    recipe.image = guimarpeixeRecipeImages[index]
+  })
+})
 
 const recipeDetails = {
   pt: {
@@ -540,7 +554,7 @@ function MiguelPage({ language }) {
 function IndustriesPage({ language }) {
   const c = pageContent[language]
   const guimarpeixe = guimarpeixeProducts[language]
-  return <section className="industries-page"><div className="industries-heading"><p className="section-label">{c.industries.eyebrow}</p><h1>{c.industries.title.split('\n').map((line, index) => <span key={line}>{index === 1 ? <em>{line}</em> : line}{index === 0 && <br />}</span>)}</h1><p>{c.industries.text}</p></div><div className="industry-grid">{industryDirectory.map((sourceIndustry) => { const industry = getIndustry(sourceIndustry, language); const catalogue = industry.slug === 'guimarpeixe' ? '/brand/Catalogo-Guimarpeixe.pdf' : industry.slug === 'superfish' ? '/brand/Catalogo-Superfish.pdf' : industry.slug === 'gelpinhos' ? '/brand/Catalogo-Gelpinhos.pdf' : industry.slug === 'agroaguiar' ? '/brand/Catalogo-Agroaguiar.pdf' : null; const actions = industry.slug === 'frigosto' ? [language === 'en' ? 'Oven and Air Fryer' : language === 'es' ? 'Horno y Air Fryer' : 'Forno e Air Fryer', language === 'en' ? 'For frying' : language === 'es' ? 'Para freír' : 'Para Fritar', c.industries.actions.catalogo] : [c.industries.actions.produtos, industry.slug === 'agroaguiar' ? language === 'en' ? 'Presentation' : language === 'es' ? 'Presentación' : 'Apresentação' : c.industries.actions.receitas, c.industries.actions.catalogo]; return <article className={["industry-card", industry.pending && 'pending', industry.blueLogo && 'blue-logo'].filter(Boolean).join(' ')} key={industry.name}><div className="industry-logo"><img src={industry.image} alt={industry.name} /></div><div className="industry-card-content"><h2>{industry.name}</h2><p>{industry.description}</p>{industry.pending && <span className="pending-badge">{language === 'pt' ? 'Em formalização' : language === 'en' ? 'Being formalised' : 'En formalización'}</span>}<div className="industry-actions">{industry.pending ? actions.map((action) => <span className="disabled-action" aria-disabled="true" key={action}>{action}</span>) : <><Link to={`/industrias/${industry.slug}/produtos`}>{actions[0]}</Link><Link to={`/industrias/${industry.slug}/receitas`}>{actions[1]}</Link>{catalogue ? <a href={catalogue} target="_blank" rel="noreferrer">{industry.slug === 'guimarpeixe' ? guimarpeixe.catalogueLabel : actions[2]}</a> : <Link to={`/industrias/${industry.slug}/catalogo`}>{actions[2]}</Link>}</>}</div></div></article> })}</div></section>
+  return <section className="industries-page"><div className="industries-heading"><p className="section-label">{c.industries.eyebrow}</p><h1>{c.industries.title.split('\n').map((line, index) => <span key={line}>{index === 1 ? <em>{line}</em> : line}{index === 0 && <br />}</span>)}</h1><p>{c.industries.text}</p></div><div className="industry-grid">{industryDirectory.map((sourceIndustry) => { const industry = getIndustry(sourceIndustry, language); const catalogue = industry.slug === 'guimarpeixe' ? '/brand/Catalogo-Guimarpeixe.pdf' : industry.slug === 'superfish' ? '/brand/Catalogo-Superfish.pdf' : industry.slug === 'gelpinhos' ? '/brand/Catalogo-Gelpinhos.pdf' : industry.slug === 'agroaguiar' ? '/brand/Catalogo-Agroaguiar-horizontal.pdf' : null; const actions = industry.slug === 'frigosto' ? [language === 'en' ? 'Oven and Air Fryer' : language === 'es' ? 'Horno y Air Fryer' : 'Forno e Air Fryer', language === 'en' ? 'For frying' : language === 'es' ? 'Para freír' : 'Para Fritar', c.industries.actions.catalogo] : [c.industries.actions.produtos, industry.slug === 'agroaguiar' ? language === 'en' ? 'Presentation' : language === 'es' ? 'Presentación' : 'Apresentação' : c.industries.actions.receitas, c.industries.actions.catalogo]; return <article className={["industry-card", industry.pending && 'pending', industry.blueLogo && 'blue-logo'].filter(Boolean).join(' ')} key={industry.name}><div className="industry-logo"><img src={industry.image} alt={industry.name} /></div><div className="industry-card-content"><h2>{industry.name}</h2><p>{industry.description}</p>{industry.pending && <span className="pending-badge">{language === 'pt' ? 'Em formalização' : language === 'en' ? 'Being formalised' : 'En formalización'}</span>}<div className="industry-actions">{industry.pending ? actions.map((action) => <span className="disabled-action" aria-disabled="true" key={action}>{action}</span>) : <><Link to={`/industrias/${industry.slug}/produtos`}>{actions[0]}</Link><Link to={`/industrias/${industry.slug}/receitas`}>{actions[1]}</Link>{catalogue ? <a href={catalogue} target="_blank" rel="noreferrer">{industry.slug === 'guimarpeixe' ? guimarpeixe.catalogueLabel : actions[2]}</a> : <Link to={`/industrias/${industry.slug}/catalogo`}>{actions[2]}</Link>}</>}</div></div></article> })}</div></section>
 }
 function GuimarpeixeProductsPage({ language }) {
   const c = pageContent[language]
@@ -575,7 +589,7 @@ function GelpinhosProductsPage({ language }) {
 function AgroAguiarProductsPage({ language }) {
   const c = pageContent[language]
   const copy = language === 'en' ? { eyebrow: 'AgroAguiar / Products', title: 'Products with origin.', intro: 'A selection of frozen, organic and dried products from Portugal.', list: 'Official product range', catalogue: 'View catalogue' } : language === 'es' ? { eyebrow: 'AgroAguiar / Productos', title: 'Productos con origen.', intro: 'Una selección de productos congelados, orgánicos y secos de Portugal.', list: 'Gama oficial de productos', catalogue: 'Ver catálogo' } : { eyebrow: 'AgroAguiar / Produtos', title: 'Produtos com origem.', intro: 'Uma seleção de produtos ultracongelados, orgânicos e secos de origem portuguesa.', list: 'Gama oficial de produtos', catalogue: 'Ver catálogo' }
-  return <article className="agro-products"><section className="superfish-products-hero agro-products-hero"><Link className="back-link" to="/industrias">{c.industries.back}</Link><div className="gp-products-brand"><img src="/brand/agroaguiar.jpeg" alt="AgroAguiar" /></div><p className="section-label">{copy.eyebrow}</p><h1>{copy.title}</h1><p>{copy.intro}</p></section><section className="agro-products-list"><header><p className="section-label">{copy.list}</p><h2>{language === 'en' ? 'Prepared for every need.' : language === 'es' ? 'Preparados para cada necesidad.' : 'Preparados para cada necessidade.'}</h2></header>{agroAguiarProductGroups.map((group) => <section className="agro-product-group" key={group.title}><h3>{group.title}</h3><div>{group.pages.map(([name, page], index) => <article className="agro-product-card" key={name}><span>{String(index + 1).padStart(2, '0')}</span><div><h4>{name}</h4><p>{language === 'en' ? 'Official technical sheet' : language === 'es' ? 'Ficha técnica oficial' : 'Ficha técnica oficial'}</p></div><img src={`/brand/agro-products/agro-${String(page).padStart(2, '0')}.webp`} alt={name} loading="lazy" /></article>)}</div></section>)}</section><section className="superfish-catalogue agro-catalogue"><div><p className="section-label">{language === 'en' ? 'Catalogue' : language === 'es' ? 'Catálogo' : 'Catálogo'}</p><h2>{language === 'en' ? 'Complete AgroAguiar catalogue.' : language === 'es' ? 'Catálogo AgroAguiar completo.' : 'Catálogo AgroAguiar completo.'}</h2><p>{language === 'en' ? 'Access all commercial specifications and available formats.' : language === 'es' ? 'Acceda a todas las especificaciones comerciales y formatos disponibles.' : 'Aceda a todas as especificações comerciais e formatos disponíveis.'}</p></div><a href="/brand/Catalogo-Agroaguiar.pdf" target="_blank" rel="noreferrer">{copy.catalogue} <span>↗</span></a></section></article>
+  return <article className="agro-products"><section className="superfish-products-hero agro-products-hero"><Link className="back-link" to="/industrias">{c.industries.back}</Link><div className="gp-products-brand"><img src="/brand/agroaguiar.jpeg" alt="AgroAguiar" /></div><p className="section-label">{copy.eyebrow}</p><h1>{copy.title}</h1><p>{copy.intro}</p></section><section className="agro-products-list"><header><p className="section-label">{copy.list}</p><h2>{language === 'en' ? 'Prepared for every need.' : language === 'es' ? 'Preparados para cada necesidad.' : 'Preparados para cada necessidade.'}</h2></header>{agroAguiarProductGroups.map((group) => <section className="agro-product-group" key={group.title}><h3>{group.title}</h3><div>{group.pages.map(([name, page], index) => <article className="agro-product-card" key={name}><span>{String(index + 1).padStart(2, '0')}</span><div><h4>{name}</h4><p>{language === 'en' ? 'Official technical sheet' : language === 'es' ? 'Ficha técnica oficial' : 'Ficha técnica oficial'}</p></div><img src={`/brand/agro-products/agro-${String(page).padStart(2, '0')}.webp`} alt={name} loading="lazy" /></article>)}</div></section>)}</section><section className="superfish-catalogue agro-catalogue"><div><p className="section-label">{language === 'en' ? 'Catalogue' : language === 'es' ? 'Catálogo' : 'Catálogo'}</p><h2>{language === 'en' ? 'Complete AgroAguiar catalogue.' : language === 'es' ? 'Catálogo AgroAguiar completo.' : 'Catálogo AgroAguiar completo.'}</h2><p>{language === 'en' ? 'Access all commercial specifications and available formats.' : language === 'es' ? 'Acceda a todas las especificaciones comerciales y formatos disponibles.' : 'Aceda a todas as especificações comerciais e formatos disponíveis.'}</p></div><a href="/brand/Catalogo-Agroaguiar-horizontal.pdf" target="_blank" rel="noreferrer">{copy.catalogue} <span>↗</span></a></section></article>
 }
 function AgroAguiarPresentationPage({ language }) {
   const [isVideoOpen, setIsVideoOpen] = useState(false)

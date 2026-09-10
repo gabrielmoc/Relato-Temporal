@@ -61,7 +61,7 @@ const frigostoOvenProducts = [
 ]
 
 const frigostoFryingProducts = [
-  { name: 'Bolinho de Bacalhau', image: '/brand/fim1.jpg', description: 'Produto ultracongelado, com a forma tradicional, formado por uma mistura homogénea à base de bacalhau.', weight: 'Mini: 15 g · Médio: 30 g · Extra: 60 g' },
+  { name: 'Bolinho com Bacalhau', image: '/brand/fim1.jpg', description: 'Produto ultracongelado, com a forma tradicional, formado por uma mistura homogénea à base de bacalhau.', weight: 'Mini: 15 g · Médio: 30 g · Extra: 60 g' },
   { name: 'Rissóis com Bacalhau', image: '/brand/fim2.jpg', description: 'Produto ultracongelado em forma de meia-lua, com recheio à base de bacalhau envolvido por uma cobertura de massa, revestida uniformemente com pão ralado.', weight: 'Mini: 20 g · Médio: 42 g' },
   { name: 'Almofadinhas com Atum', image: '/brand/fim3.jpg', description: 'Produto ultracongelado em forma de almofada, com recheio à base de atum envolvido por uma cobertura de massa, revestida uniformemente com pão ralado.', weight: '48 g' },
   { name: 'Panqueca com Bacalhau', image: '/brand/fim4.jpg', description: 'Produto ultracongelado, com a forma tradicional, formado por uma mistura homogénea à base de bacalhau.', weight: '50 g' }

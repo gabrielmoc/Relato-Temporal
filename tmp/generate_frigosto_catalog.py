@@ -27,7 +27,7 @@ GROUPS = [
         ('Bacalhau a Bras', 'bacalhau-a-bras.jpg', 'Produto ultracongelado e pre-cozinhado, constituido por uma camada inferior de ingredientes e uma camada superior de batata.', 'Dose individual: 300 g'),
     ]),
     ('Para Fritar', [
-        ('Bolinho de Bacalhau', 'fim1.jpg', 'Produto ultracongelado, com a forma tradicional, formado por uma mistura homogenea a base de bacalhau.', 'Mini: 15 g - Medio: 30 g - Extra: 60 g'),
+        ('Bolinho com Bacalhau', 'fim1.jpg', 'Produto ultracongelado, com a forma tradicional, formado por uma mistura homogenea a base de bacalhau.', 'Mini: 15 g - Medio: 30 g - Extra: 60 g'),
         ('Rissois com Bacalhau', 'fim2.jpg', 'Produto ultracongelado em forma de meia-lua, com recheio a base de bacalhau envolvido por uma cobertura de massa, revestida uniformemente com pao ralado.', 'Mini: 20 g - Medio: 42 g'),
         ('Almofadinhas com Atum', 'fim3.jpg', 'Produto ultracongelado em forma de almofada, com recheio a base de atum envolvido por uma cobertura de massa, revestida uniformemente com pao ralado.', '48 g'),
         ('Panqueca com Bacalhau', 'fim4.jpg', 'Produto ultracongelado, com a forma tradicional, formado por uma mistura homogenea a base de bacalhau.', '50 g'),

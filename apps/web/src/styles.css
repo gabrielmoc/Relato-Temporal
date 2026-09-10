@@ -306,8 +306,10 @@
 @media (max-width: 780px) { .frigosto-closing-links { grid-template-columns: 1fr; gap: 42px; padding: 70px 24px; }.frigosto-closing-links a { padding: 19px 18px; } }
 
 /* Miguel Bregieira portrait: layered, editorial framing that retains the original photograph. */
+.industry-card.pending { grid-template-rows: 1fr; }
+.industry-card.pending .industry-logo { display: none; }
 .profile-intro figure { isolation: isolate; overflow: visible; padding: 11px 11px 34px; border: 1px solid rgba(81, 174, 187, .48); background: linear-gradient(135deg, rgba(27, 76, 86, .96), #0b1d23 48%, rgba(11, 39, 46, .94)); box-shadow: 0 0 0 7px rgba(5, 17, 22, .72), 28px 34px 76px rgba(0, 0, 0, .4); }
-.profile-intro figure::before { z-index: 0; top: -20px; right: -20px; bottom: 20px; left: 20px; width: auto; height: auto; border-color: rgba(0, 167, 195, .72); }
+.profile-intro figure::before { content: none; }
 .profile-intro figure::after { position: absolute; z-index: 2; inset: 11px 11px 34px; content: ''; pointer-events: none; background: radial-gradient(ellipse at 61% 38%, transparent 16%, rgba(4, 18, 23, .1) 67%, rgba(4, 18, 23, .36) 100%), linear-gradient(110deg, rgba(8, 39, 48, .22), transparent 48%); }
 .profile-intro img { position: relative; z-index: 1; object-position: 58% 43%; filter: none; }
 .profile-intro figcaption { display: table; z-index: 3; width: max-content; margin: 12px 14px 0 auto; color: #32bdd0; font-size: 9px; line-height: 1.2; text-align: right; text-shadow: 0 1px 12px rgba(0, 0, 0, .6); }

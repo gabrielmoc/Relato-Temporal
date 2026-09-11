@@ -24,7 +24,7 @@ const industryDirectory = [
   { slug: 'gelpinhos', name: 'Gelpinhos', image: '/brand/gelpinhos.png', description: 'Especialistas em bacalhau desssalgado ultracongelado, com qualidade reconhecida.', blueLogo: true },
   { slug: 'frigosto', name: 'Frigosto', image: '/brand/frigosto.png', description: 'Tradição e sabor em soluções alimentares para novos mercados.' },
   { slug: 'agroaguiar', name: 'AgroAguiar', image: '/brand/agroaguiar.jpeg', description: 'Agroindústria portuguesa especialista em frutas deliciosas e sustentáveis.' },
-  { slug: 'costa-atlantico', name: 'Costa Atlântico', image: null, description: 'Especialista em Polvo. Indústria em fase de formalização.', pending: true }
+  { slug: 'costa-atlantico', name: 'Em breve...', image: null, description: 'Especialista em Polvo. Indústria em fase de formalização.', pending: true }
 ]
 
 const agroAguiarProductGroups = [
